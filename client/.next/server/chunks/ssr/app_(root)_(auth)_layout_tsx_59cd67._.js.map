@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/jakhon/Desktop/eCommerce/client/app/%28root%29/%28auth%29/layout.tsx"],"sourcesContent":["import { ChildProps } from '@/types'\nimport React from 'react'\n\nfunction AuthLayout({ children }: ChildProps) {\n\treturn <div className='flex justify-center mt-44'>{children}</div>\n}\n\nexport default AuthLayout\n"],"names":[],"mappings":";;;;;AAGA,SAAS,WAAW,EAAE,QAAQ,EAAc;IAC3C,qBAAO,8OAAC;QAAI,WAAU;kBAA6B;;;;;;AACpD;uCAEe"}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

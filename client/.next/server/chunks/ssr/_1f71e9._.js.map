@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/jakhon/Desktop/eCommerce/client/app/%28root%29/%28auth%29/sign-in/page.tsx"],"sourcesContent":["import React from 'react'\n\nfunction SignInPage() {\n\treturn <div>SignInPage</div>\n}\n\nexport default SignInPage\n"],"names":[],"mappings":";;;;;AAEA,SAAS;IACR,qBAAO,8OAAC;kBAAI;;;;;;AACb;uCAEe"}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "/(root)/dashboard/(personal-information)/page": [
+      "static/chunks/[root of the server]__fb3ac0._.css",
+      "static/chunks/_65ab26._.js",
+      "static/chunks/app_layout_tsx_61af54._.js",
+      "static/chunks/node_modules_next_dist_a082a6._.js",
+      "static/chunks/app_(root)_layout_tsx_024a13._.js",
+      "static/chunks/app_(root)_layout_tsx_a95a37._.js",
+      "static/chunks/node_modules_fb57ac._.js",
+      "static/chunks/_568e55._.js",
+      "static/chunks/app_(root)_dashboard_layout_tsx_284e94._.js",
+      "static/chunks/node_modules_4379d7._.js",
+      "static/chunks/_c9db46._.js",
+      "static/chunks/app_(root)_dashboard_(personal-information)_page_tsx_8f849e._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
+      "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
+      "static/chunks/node_modules_next_dist_client_523921._.js",
+      "static/chunks/node_modules_next_dist_4bb10e._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_d0a96d._.js",
+      "static/chunks/_e69f0d._.js",
+      "static/chunks/_d95469._.js"
+    ]
+  }
+}

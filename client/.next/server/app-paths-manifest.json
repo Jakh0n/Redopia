@@ -1,0 +1,4 @@
+{
+  "/(root)/(home)/page": "app/(root)/(home)/page.js",
+  "/(root)/product/[productid]/page": "app/(root)/product/[productid]/page.js"
+}
