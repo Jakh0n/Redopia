@@ -6,7 +6,7 @@ function Layout({ children }: ChildProps) {
 	return (
 		<div>
 			<Navbar />
-			<main className='container max-w-6xl mt-24'>{children}</main>
+			<main className='flex justify-center  mt-44'>{children}</main>
 		</div>
 	)
 }

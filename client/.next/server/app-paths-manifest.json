@@ -1,4 +1,6 @@
 {
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
-  "/(root)/product/[productid]/page": "app/(root)/product/[productid]/page.js"
+  "/(root)/product/[productid]/page": "app/(root)/product/[productid]/page.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

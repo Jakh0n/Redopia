@@ -501,6 +501,10 @@ body {
   margin-top: 1rem;
 }
 
+.mt-44 {
+  margin-top: 11rem;
+}
+
 .line-clamp-5 {
   overflow: hidden;
   display: -webkit-box;

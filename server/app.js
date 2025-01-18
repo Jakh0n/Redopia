@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api', require('./routes/index'))
 
 //Error handling
-app.use(errorMiddlewareff)
+app.use(errorMiddleware)
 
 const Bootstrap = async () => {
 	try {
