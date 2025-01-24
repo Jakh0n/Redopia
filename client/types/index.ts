@@ -8,13 +8,32 @@ export interface QueryProps {
 	value?: string | null
 }
 
+export interface ReturnActionType {
+	user: IUser
+	failure: string
+}
+
 export interface IProduct {
 	title: string
 	category: string
 	price: number
 	image: string
-	excerpt: string
+	description: string
 	imageKey: string
 	_id: string
-	description: string
+}
+
+export interface IUser {
+	email: string
+	fullName: string
+	password: string
+	_id: string
+	role: string
+	orderCount: number
+	totalPrice: number
+	avatar: string
+	avatarKey: string
+	isDeleted: boolean
+	deletedAt: Date
+	favorites: IProduct[]
 }
