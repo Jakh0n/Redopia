@@ -14,11 +14,14 @@ async function Navbar() {
 			<div className='container h-full flex items-center justify-between max-w-6xl'>
 				<Logo />
 				<div className='flex items-center gap-2 '>
-					<Button asChild size={'icon'}>
-						<Link href={'/sign-in'}>
-							<User />
-						</Link>
-					</Button>
+					{session?.currentUser?._id && <UserBox user={session.currentUser} />}
+					{!session?.currentUser?._id && (
+						<Button asChild size={'icon'}>
+							<Link href={'/sign-in'}>
+								<User />
+							</Link>
+						</Button>
+					)}
 				</div>
 			</div>
 		</div>
