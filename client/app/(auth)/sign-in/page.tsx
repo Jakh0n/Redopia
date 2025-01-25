@@ -39,7 +39,6 @@ const SignInPage = () => {
 	async function onSubmit(values: z.infer<typeof loginSchema>) {
 		setIsLoading(true)
 		const res = await login(values)
-		console.log(res)
 		if (res?.serverError || res?.validationErrors || !res?.data) {
 			return onError('Something went wrong')
 		}

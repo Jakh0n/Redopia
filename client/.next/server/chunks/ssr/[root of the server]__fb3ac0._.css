@@ -407,6 +407,10 @@ body {
   left: 0;
 }
 
+.left-2 {
+  left: .5rem;
+}
+
 .left-\[50\%\] {
   left: 50%;
 }
@@ -441,10 +445,6 @@ body {
 
 .top-\[50\%\] {
   top: 50%;
-}
-
-.left-2 {
-  left: .5rem;
 }
 
 .z-10 {
@@ -501,6 +501,10 @@ body {
   margin-bottom: .125rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mr-2 {
   margin-right: .5rem;
 }
@@ -523,10 +527,6 @@ body {
 
 .mt-44 {
   margin-top: 11rem;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .line-clamp-5 {
@@ -568,6 +568,10 @@ body {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-2 {
+  height: .5rem;
 }
 
 .h-20 {
@@ -614,10 +618,6 @@ body {
   height: 1px;
 }
 
-.h-2 {
-  height: .5rem;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
@@ -636,6 +636,10 @@ body {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-2 {
+  width: .5rem;
 }
 
 .w-3\.5 {
@@ -680,10 +684,6 @@ body {
 
 .w-px {
   width: 1px;
-}
-
-.w-2 {
-  width: .5rem;
 }
 
 .min-w-\[8rem\] {
@@ -970,12 +970,12 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.fill-red-500 {
-  fill: #ef4444;
-}
-
 .fill-current {
   fill: currentColor;
+}
+
+.fill-red-500 {
+  fill: #ef4444;
 }
 
 .p-0 {
@@ -1068,6 +1068,14 @@ body {
   padding-left: 1rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pr-2 {
+  padding-right: .5rem;
+}
+
 .pr-6 {
   padding-right: 1.5rem;
 }
@@ -1078,14 +1086,6 @@ body {
 
 .pt-0 {
   padding-top: 0;
-}
-
-.pl-8 {
-  padding-left: 2rem;
-}
-
-.pr-2 {
-  padding-right: .5rem;
 }
 
 .text-left {
@@ -1238,16 +1238,16 @@ body {
   opacity: .5;
 }
 
+.opacity-60 {
+  opacity: .6;
+}
+
 .opacity-70 {
   opacity: .7;
 }
 
 .opacity-90 {
   opacity: .9;
-}
-
-.opacity-60 {
-  opacity: .6;
 }
 
 .shadow {

@@ -1,8 +1,17 @@
+import { verifyOtp } from './../../actions/auth-action'
 import { z } from 'zod'
 
 export const loginSchema = z.object({
 	email: z.string().email(),
 	password: z.string().min(6),
+})
+
+export const verifyOtpSchema = z.object({
+	otp: z.string().length(6, { message: 'OTP must be 6 characters' }),
+	email: z.string().email({ message: 'Invalid' }),
+})
+export const otpSchema = z.object({
+	otp: z.string().length(6, { message: 'OTP must be 6 characters' }),
 })
 
 export const registerSchema = z.object({
