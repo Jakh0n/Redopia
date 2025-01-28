@@ -1,5 +1,6 @@
 'use client'
 
+import { createProduct, deleteFile } from '@/actions/admin.action'
 import { Button } from '@/components/ui/button'
 import {
 	Form,
@@ -28,15 +29,20 @@ import {
 } from '@/components/ui/sheet'
 import { Textarea } from '@/components/ui/textarea'
 import { categories } from '@/constants'
+import UseAction from '@/hooks/use-action'
 import { useProduct } from '@/hooks/use-product'
+import { toast } from '@/hooks/use-toast'
+import { UploadDropzone } from '@/lib/uploadthing'
 import { formatPrice } from '@/lib/utils'
 import { productSchema } from '@/lib/validation'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { PlusCircle } from 'lucide-react'
+import { PlusCircle, X } from 'lucide-react'
+import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 const AddProduct = () => {
+	const { isLoading, onError, setIsLoading } = UseAction()
 	const { open, setOpen } = useProduct()
 
 	const form = useForm<z.infer<typeof productSchema>>({
@@ -51,10 +57,35 @@ const AddProduct = () => {
 		},
 	})
 
-	async function onSubmit(values: z.infer<typeof productSchema>) {}
+	async function onSubmit(values: z.infer<typeof productSchema>) {
+		if (!form.watch('image'))
+			return toast({
+				description: 'Please upload an image',
+				variant: 'destructive',
+			})
+		setIsLoading(true)
+		const res = await createProduct(values)
+		if (res?.serverError || res?.validationErrors || !res?.data) {
+			return onError('Something went wrong')
+		}
+		if (res.data.failure) {
+			return onError(res.data.failure)
+		}
+		if (res.data.status === 201) {
+			toast({ description: 'Product created successfully' })
+			setOpen(false)
+			form.reset()
+			setIsLoading(false)
+		}
+	}
 
 	function onOpen() {
 		setOpen(true)
+	}
+	function onDeleteImage() {
+		deleteFile(form.getValues('imageKey'))
+		form.setValue('image', '')
+		form.setValue('imageKey', '')
 	}
 
 	return (
@@ -157,6 +188,37 @@ const AddProduct = () => {
 									</FormItem>
 								)}
 							/>
+							{form.watch('image') && (
+								<div className='w-full h-[200px] bg-secondary flex justify-center items-center relative'>
+									<Image
+										src={form.watch('image')}
+										alt='product image'
+										fill
+										className='object-cover'
+									/>
+									<Button
+										size={'icon'}
+										variant={'destructive'}
+										className='absolute right-0 top-0'
+										type='button'
+										onClick={onDeleteImage}
+									>
+										<X />
+									</Button>
+								</div>
+							)}
+							{!form.watch('image') && (
+								<UploadDropzone
+									endpoint={'imageUploader'}
+									onClientUploadComplete={res => {
+										form.setValue('image', res[0].url)
+										form.setValue('imageKey', res[0].key)
+									}}
+									config={{ appendOnPaste: true, mode: 'auto' }}
+									appearance={{ container: { height: 200, padding: 10 } }}
+								/>
+							)}
+
 							<Button type='submit' className='w-full'>
 								Submit
 							</Button>

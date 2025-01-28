@@ -1,5 +1,49 @@
 {
   "node": {
+    "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": {
+      "workers": {
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/products/page": "action-browser"
+      }
+    },
+    "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": {
+      "workers": {
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/products/page": "rsc"
+      }
+    },
+    "7f0c04b9bb8280c4b1004058763525f894556cddc1": {
+      "workers": {
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/products/page": "action-browser"
+      }
+    },
+    "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": {
+      "workers": {
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/products/page": "action-browser"
+      }
+    },
     "7f1177758187559a97f0b3e572320ee1f872a136e3": {
       "workers": {
         "app/(auth)/sign-in/page": {

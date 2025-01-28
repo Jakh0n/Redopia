@@ -1,3 +1,4 @@
+import { products } from '@/constants'
 export interface ChildProps {
 	children: React.ReactNode
 }
@@ -12,6 +13,7 @@ export interface ReturnActionType {
 	user: IUser
 	failure: string
 	status: number
+	products: IProduct[]
 }
 
 export interface IProduct {
