@@ -1,3 +1,4 @@
+import { updateProduct } from '@/actions/admin.action'
 import { verifyOtp } from './../../actions/auth-action'
 import { z } from 'zod'
 
@@ -44,6 +45,10 @@ export const productSchema = z.object({
 	image: z.string(),
 	imageKey: z.string(),
 })
+
+export const updateProductSchema = z
+	.object({ id: z.string() })
+	.merge(productSchema)
 
 export const passwordSchema = z
 	.object({

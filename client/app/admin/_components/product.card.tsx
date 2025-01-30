@@ -22,13 +22,14 @@ import { FC } from 'react'
 import NoSSR from 'react-no-ssr'
 
 interface Props {
-	product: Partial<IProduct>
+	product: IProduct
 }
 const ProductCard: FC<Props> = ({ product }) => {
-	const { setOpen } = useProduct()
+	const { setOpen, setProduct } = useProduct()
 
 	const onEdit = () => {
 		setOpen(true)
+		setProduct(product)
 	}
 
 	return (

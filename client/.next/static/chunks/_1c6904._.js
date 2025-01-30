@@ -5,15 +5,17 @@
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"7f0c04b9bb8280c4b1004058763525f894556cddc1":"getProducts","7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b":"createProduct","7f62d54b8e116e26510c85ab88dab6b5f596b64a42":"deleteFile"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"7f0c04b9bb8280c4b1004058763525f894556cddc1":"getProducts","7f4c8bcb0ada6723f8e67995350134120d7f3f67ea":"updateProduct","7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b":"createProduct","7f62d54b8e116e26510c85ab88dab6b5f596b64a42":"deleteFile"} */ __turbopack_esm__({
     "createProduct": (()=>createProduct),
     "deleteFile": (()=>deleteFile),
-    "getProducts": (()=>getProducts)
+    "getProducts": (()=>getProducts),
+    "updateProduct": (()=>updateProduct)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-client-wrapper.js [app-client] (ecmascript)");
 ;
 var getProducts = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7f0c04b9bb8280c4b1004058763525f894556cddc1", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getProducts");
 var createProduct = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "createProduct");
+var updateProduct = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7f4c8bcb0ada6723f8e67995350134120d7f3f67ea", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "updateProduct");
 var deleteFile = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7f62d54b8e116e26510c85ab88dab6b5f596b64a42", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "deleteFile");
 }}),
 "[project]/components/ui/label.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
@@ -819,6 +821,7 @@ __turbopack_esm__({
     "passwordSchema": (()=>passwordSchema),
     "productSchema": (()=>productSchema),
     "registerSchema": (()=>registerSchema),
+    "updateProductSchema": (()=>updateProductSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zod/lib/index.mjs [app-client] (ecmascript)");
@@ -873,6 +876,9 @@ const productSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
     image: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string(),
     imageKey: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string()
 });
+const updateProductSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].object({
+    id: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string()
+}).merge(productSchema);
 const passwordSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].object({
     oldPassword: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().min(6, {
         message: 'Password must be at least 6 characters'
@@ -920,6 +926,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/lib/validation/index.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@hookform/resolvers/zod/dist/zod.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusCircle$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/circle-plus.js [app-client] (ecmascript) <export default as PlusCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-hook-form/dist/index.esm.mjs [app-client] (ecmascript)");
@@ -946,10 +953,11 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+;
 const AddProduct = ()=>{
     _s();
     const { isLoading, onError, setIsLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])();
-    const { open, setOpen } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"])();
+    const { open, setOpen, product, setProduct } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"])();
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
         resolver: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["zodResolver"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["productSchema"]),
         defaultValues: {
@@ -967,7 +975,16 @@ const AddProduct = ()=>{
             variant: 'destructive'
         });
         setIsLoading(true);
-        const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createProduct"])(values);
+        let res;
+        if (product?._id) {
+            res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateProduct"])({
+                ...values,
+                id: product._id
+            });
+            setOpen(false);
+        } else {
+            res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createProduct"])(values);
+        }
         if (res?.serverError || res?.validationErrors || !res?.data) {
             return onError('Something went wrong');
         }
@@ -982,15 +999,44 @@ const AddProduct = ()=>{
             form.reset();
             setIsLoading(false);
         }
+        if (res.data.status === 200) {
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$toast$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"])({
+                description: 'Product updated successfully'
+            });
+            setOpen(false);
+            form.reset();
+            setIsLoading(false);
+        }
     }
     function onOpen() {
         setOpen(true);
+        setProduct({
+            _id: '',
+            title: '',
+            description: '',
+            category: '',
+            price: 0,
+            image: '',
+            imageKey: ''
+        });
     }
     function onDeleteImage() {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteFile"])(form.getValues('imageKey'));
         form.setValue('image', '');
         form.setValue('imageKey', '');
     }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "AddProduct.useEffect": ()=>{
+            if (product) {
+                form.reset({
+                    ...product,
+                    price: product.price.toString()
+                });
+            }
+        }
+    }["AddProduct.useEffect"], [
+        product
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1001,18 +1047,18 @@ const AddProduct = ()=>{
                         children: "Add Product"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                        lineNumber: 94,
+                        lineNumber: 126,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusCircle$3e$__["PlusCircle"], {}, void 0, false, {
                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                        lineNumber: 95,
+                        lineNumber: 127,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                lineNumber: 93,
+                lineNumber: 125,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Sheet"], {
@@ -1026,27 +1072,27 @@ const AddProduct = ()=>{
                                     children: "Manage your product"
                                 }, void 0, false, {
                                     fileName: "[project]/app/admin/_components/add-product.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 132,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetDescription"], {
                                     children: "Field marked with * are required fields and must be filled."
                                 }, void 0, false, {
                                     fileName: "[project]/app/admin/_components/add-product.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 133,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                            lineNumber: 99,
+                            lineNumber: 131,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Separator"], {
                             className: "my-3"
                         }, void 0, false, {
                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                            lineNumber: 105,
+                            lineNumber: 137,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Form"], {
@@ -1066,7 +1112,7 @@ const AddProduct = ()=>{
                                                         children: "Title"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 145,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1076,30 +1122,30 @@ const AddProduct = ()=>{
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                            lineNumber: 115,
+                                                            lineNumber: 147,
                                                             columnNumber: 12
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 146,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                         className: "text-xs text-red-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 153,
                                                         columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 144,
                                                 columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 140,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1113,7 +1159,7 @@ const AddProduct = ()=>{
                                                         children: "Description"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 130,
+                                                        lineNumber: 162,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1123,30 +1169,30 @@ const AddProduct = ()=>{
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                            lineNumber: 132,
+                                                            lineNumber: 164,
                                                             columnNumber: 12
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 163,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                         className: "text-xs text-red-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 170,
                                                         columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 129,
+                                                lineNumber: 161,
                                                 columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 157,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1160,7 +1206,7 @@ const AddProduct = ()=>{
                                                         children: "Cateogry"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 179,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -1174,17 +1220,17 @@ const AddProduct = ()=>{
                                                                         placeholder: "Select category"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                                        lineNumber: 154,
+                                                                        lineNumber: 186,
                                                                         columnNumber: 14
                                                                     }, void 0)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                                    lineNumber: 153,
+                                                                    lineNumber: 185,
                                                                     columnNumber: 13
                                                                 }, void 0)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                                lineNumber: 152,
+                                                                lineNumber: 184,
                                                                 columnNumber: 12
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1193,36 +1239,36 @@ const AddProduct = ()=>{
                                                                         children: category
                                                                     }, category, false, {
                                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                                        lineNumber: 159,
+                                                                        lineNumber: 191,
                                                                         columnNumber: 14
                                                                     }, void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                                lineNumber: 157,
+                                                                lineNumber: 189,
                                                                 columnNumber: 12
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 180,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                         className: "text-xs text-red-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 165,
+                                                        lineNumber: 197,
                                                         columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 146,
+                                                lineNumber: 178,
                                                 columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 174,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1236,7 +1282,7 @@ const AddProduct = ()=>{
                                                         children: !form.watch('price') ? 'Price' : `Price ${(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatPrice"])(Number(form.watch('price')))} `
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 206,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1247,30 +1293,30 @@ const AddProduct = ()=>{
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                            lineNumber: 180,
+                                                            lineNumber: 212,
                                                             columnNumber: 12
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 211,
                                                         columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {
                                                         className: "text-xs text-red-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 219,
                                                         columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 205,
                                                 columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 201,
                                         columnNumber: 8
                                     }, this),
                                     form.watch('image') && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1283,7 +1329,7 @@ const AddProduct = ()=>{
                                                 className: "object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 225,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1294,18 +1340,18 @@ const AddProduct = ()=>{
                                                 onClick: onDeleteImage,
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {}, void 0, false, {
                                                     fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                    lineNumber: 206,
+                                                    lineNumber: 238,
                                                     columnNumber: 11
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                                lineNumber: 199,
+                                                lineNumber: 231,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 224,
                                         columnNumber: 9
                                     }, this),
                                     !form.watch('image') && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$uploadthing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["UploadDropzone"], {
@@ -1326,7 +1372,7 @@ const AddProduct = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 211,
+                                        lineNumber: 243,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1335,35 +1381,35 @@ const AddProduct = ()=>{
                                         children: "Submit"
                                     }, void 0, false, {
                                         fileName: "[project]/app/admin/_components/add-product.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 254,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                                lineNumber: 107,
+                                lineNumber: 139,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/admin/_components/add-product.tsx",
-                            lineNumber: 106,
+                            lineNumber: 138,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/admin/_components/add-product.tsx",
-                    lineNumber: 98,
+                    lineNumber: 130,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/admin/_components/add-product.tsx",
-                lineNumber: 97,
+                lineNumber: 129,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true);
 };
-_s(AddProduct, "Gw1RURuzVjX6JlQHj6sufc/16nE=", false, function() {
+_s(AddProduct, "z9+IsXojO8p7hxw2XT/rZUotkHw=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"]
@@ -1455,9 +1501,10 @@ var _s = __turbopack_refresh__.signature();
 ;
 const ProductCard = ({ product })=>{
     _s();
-    const { setOpen } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"])();
+    const { setOpen, setProduct } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"])();
     const onEdit = ()=>{
         setOpen(true);
+        setProduct(product);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: 'border relative flex justify-between flex-col',
@@ -1473,7 +1520,7 @@ const ProductCard = ({ product })=>{
                         alt: product.title
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 37,
+                        lineNumber: 38,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1481,13 +1528,13 @@ const ProductCard = ({ product })=>{
                         children: product.category
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1501,7 +1548,7 @@ const ProductCard = ({ product })=>{
                                 children: product.title
                             }, void 0, false, {
                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                lineNumber: 49,
+                                lineNumber: 50,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$no$2d$ssr$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1510,18 +1557,18 @@ const ProductCard = ({ product })=>{
                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatPrice"])(product.price)
                                 }, void 0, false, {
                                     fileName: "[project]/app/admin/_components/product.card.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 52,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                lineNumber: 50,
+                                lineNumber: 51,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 48,
+                        lineNumber: 49,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1529,20 +1576,20 @@ const ProductCard = ({ product })=>{
                         children: product.description
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Separator"], {
                         className: "my-2"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                lineNumber: 47,
+                lineNumber: 48,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1554,7 +1601,7 @@ const ProductCard = ({ product })=>{
                         children: "Edit"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialog"], {
@@ -1566,12 +1613,12 @@ const ProductCard = ({ product })=>{
                                     children: "Delete"
                                 }, void 0, false, {
                                     fileName: "[project]/app/admin/_components/product.card.tsx",
-                                    lineNumber: 66,
+                                    lineNumber: 67,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                lineNumber: 65,
+                                lineNumber: 66,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogContent"], {
@@ -1582,20 +1629,20 @@ const ProductCard = ({ product })=>{
                                                 children: "Are you absolutely sure?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                                lineNumber: 70,
+                                                lineNumber: 71,
                                                 columnNumber: 8
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
                                                 children: "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                                lineNumber: 71,
+                                                lineNumber: 72,
                                                 columnNumber: 8
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 70,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
@@ -1604,48 +1651,48 @@ const ProductCard = ({ product })=>{
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                                lineNumber: 77,
+                                                lineNumber: 78,
                                                 columnNumber: 8
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
                                                 children: "Continue"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                                lineNumber: 78,
+                                                lineNumber: 79,
                                                 columnNumber: 8
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 77,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/admin/_components/product.card.tsx",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/_components/product.card.tsx",
-                lineNumber: 60,
+                lineNumber: 61,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/admin/_components/product.card.tsx",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 3
     }, this);
 };
-_s(ProductCard, "TGOu/0T9ycZTPEdP+I2BHT4w2Xk=", false, function() {
+_s(ProductCard, "gTteVn8deiMd1r+ENukmNh5+Tuo=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$product$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useProduct"]
     ];
