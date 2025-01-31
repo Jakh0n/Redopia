@@ -19,7 +19,7 @@ const AdminController = new (class {
 	async getProduct(req, res, next) {
 		const { searchQuery, filter, category, page, pageSize } = req.query
 		const skipAmmount = (+page - 1) * +pageSize
-		const query = []
+		const query = {}
 
 		if (searchQuery) {
 			const escapedSearchQuery = searchQuery.replace(
@@ -28,7 +28,10 @@ const AdminController = new (class {
 			)
 			query.$or = [{ title: { $regex: new RegExp(escapedSearchQuery, 'i') } }]
 		}
-
+		if (category === 'All') query.category = { $exists: true }
+		else if (category !== 'All') {
+			if (category) query.category = category
+		}
 		try {
 			const products = await productModel.find(query)
 			return res.json({ products })
