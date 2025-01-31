@@ -32,8 +32,15 @@ const AdminController = new (class {
 		else if (category !== 'All') {
 			if (category) query.category = category
 		}
+		let sortOptions = { createdAt: -1 }
+		if (filter === 'newest') sortOptions = { createdAt: -1 }
+		else if (filter === 'oldest') sortOptions = { createdAt: 1 }
 		try {
-			const products = await productModel.find(query)
+			const products = await productModel
+				.find(query)
+				.sort(sortOptions)
+				.skip(skipAmmount)
+				.limit(+pageSize)
 			return res.json({ products })
 		} catch (error) {
 			next(error)
