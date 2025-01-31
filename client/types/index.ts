@@ -2,6 +2,9 @@ import { products } from '@/constants'
 export interface ChildProps {
 	children: React.ReactNode
 }
+export type SearchParams = Promise<{
+	[key: string]: string | string[] | undefined
+}>
 
 export interface QueryProps {
 	params: string

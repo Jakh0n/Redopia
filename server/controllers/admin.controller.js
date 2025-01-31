@@ -17,8 +17,20 @@ const AdminController = new (class {
 
 	// {GET} /admin/products
 	async getProduct(req, res, next) {
+		const { searchQuery, filter, category, page, pageSize } = req.query
+		const skipAmmount = (+page - 1) * +pageSize
+		const query = []
+
+		if (searchQuery) {
+			const escapedSearchQuery = searchQuery.replace(
+				/[.*+?^${}()|[\]\\]/g,
+				'\\$&'
+			)
+			query.$or = [{ title: { $regex: new RegExp(escapedSearchQuery, 'i') } }]
+		}
+
 		try {
-			const products = await productModel.find()
+			const products = await productModel.find(query)
 			return res.json({ products })
 		} catch (error) {
 			next(error)

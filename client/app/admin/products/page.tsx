@@ -4,9 +4,23 @@ import ProductCard from '../_components/product.card'
 import { products } from '@/constants'
 import Filter from '@/components/shared/filter'
 import { getProducts } from '@/actions/admin.action'
+import { SearchParams } from '@/types'
+import { FC } from 'react'
 
-const Page = async () => {
-	const res = await getProducts()
+interface Props {
+	searchParams: SearchParams
+}
+
+const Page: FC<Props> = async props => {
+	const searchParams = await props.searchParams
+	console.log(searchParams)
+
+	const res = await getProducts({
+		searchQuery: `${searchParams.q || ''}`,
+		filter: `${searchParams.filter || ''}`,
+		category: `${searchParams.category || ''}`,
+		page: `${searchParams.page || '1'}`,
+	})
 	const products = res?.data?.products
 	return (
 		<>

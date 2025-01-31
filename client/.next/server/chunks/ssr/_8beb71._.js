@@ -681,6 +681,7 @@ __turbopack_esm__({
     "passwordSchema": (()=>passwordSchema),
     "productSchema": (()=>productSchema),
     "registerSchema": (()=>registerSchema),
+    "searchParamsSchema": (()=>searchParamsSchema),
     "updateProductSchema": (()=>updateProductSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
@@ -757,6 +758,13 @@ const passwordSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
     path: [
         'confirmPassword'
     ]
+});
+const searchParamsSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].object({
+    searchQuery: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    filter: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    category: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    page: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].string().default('1'),
+    pageSize: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["z"].string().default('6')
 });
 }}),
 "[project]/app/admin/_components/add-product.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {

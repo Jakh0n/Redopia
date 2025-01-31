@@ -4,21 +4,29 @@ import { axiosClient } from '@/http/axios'
 import { authOptions } from '@/lib/auth-options'
 import { generateToken } from '@/lib/generate-token'
 import { actionClient } from '@/lib/safe-action'
-import { idSchema, productSchema, updateProductSchema } from '@/lib/validation'
+import {
+	idSchema,
+	productSchema,
+	searchParamsSchema,
+	updateProductSchema,
+} from '@/lib/validation'
 import { ReturnActionType } from '@/types'
 import { getServerSession } from 'next-auth'
 import { revalidatePath } from 'next/cache'
 import { UTApi } from 'uploadthing/server'
 const utapi = new UTApi()
 
-export const getProducts = actionClient.action<ReturnActionType>(async () => {
-	const session = await getServerSession(authOptions)
-	const token = await generateToken(session?.currentUser?._id)
-	const { data } = await axiosClient.get('/api/admin/products', {
-		headers: { Authorization: `Bearer ${token}` },
+export const getProducts = actionClient
+	.schema(searchParamsSchema)
+	.action<ReturnActionType>(async ({ parsedInput }) => {
+		const session = await getServerSession(authOptions)
+		const token = await generateToken(session?.currentUser?._id)
+		const { data } = await axiosClient.get('/api/admin/products', {
+			headers: { Authorization: `Bearer ${token}` },
+			params: parsedInput,
+		})
+		return JSON.parse(JSON.stringify(data))
 	})
-	return JSON.parse(JSON.stringify(data))
-})
 
 export const createProduct = actionClient
 	.schema(productSchema)

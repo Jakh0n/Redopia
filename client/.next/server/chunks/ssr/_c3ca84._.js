@@ -207,6 +207,7 @@ __turbopack_esm__({
     "passwordSchema": (()=>passwordSchema),
     "productSchema": (()=>productSchema),
     "registerSchema": (()=>registerSchema),
+    "searchParamsSchema": (()=>searchParamsSchema),
     "updateProductSchema": (()=>updateProductSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
@@ -284,6 +285,13 @@ const passwordSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
         'confirmPassword'
     ]
 });
+const searchParamsSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].object({
+    searchQuery: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    filter: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    category: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    page: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().default('1'),
+    pageSize: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().default('6')
+});
 }}),
 "[project]/actions/admin.action.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -319,13 +327,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$uploadthing$
 ;
 ;
 const utapi = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$uploadthing$2f$server$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["UTApi"]();
-const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getProducts = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].action(async ()=>{
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getProducts = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["searchParamsSchema"]).action(async ({ parsedInput })=>{
     const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
     const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
     const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].get('/api/admin/products', {
         headers: {
             Authorization: `Bearer ${token}`
-        }
+        },
+        params: parsedInput
     });
     return JSON.parse(JSON.stringify(data));
 });
@@ -405,8 +414,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2
 ;
 ;
 ;
-const Page = async ()=>{
-    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"])();
+const Page = async (props)=>{
+    const searchParams = await props.searchParams;
+    console.log(searchParams);
+    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"])({
+        searchQuery: `${searchParams.q || ''}`,
+        filter: `${searchParams.filter || ''}`,
+        category: `${searchParams.category || ''}`,
+        page: `${searchParams.page || '1'}`
+    });
     const products = res?.data?.products;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -418,32 +434,32 @@ const Page = async ()=>{
                         children: "Products"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 14,
+                        lineNumber: 28,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$admin$2f$_components$2f$add$2d$product$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 15,
+                        lineNumber: 29,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 13,
+                lineNumber: 27,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Separator"], {
                 className: "my-3"
             }, void 0, false, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 18,
+                lineNumber: 32,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shared$2f$filter$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 showCategory: true
             }, void 0, false, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 20,
+                lineNumber: 34,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -454,20 +470,20 @@ const Page = async ()=>{
                         children: "No products found"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 24,
+                        lineNumber: 38,
                         columnNumber: 6
                     }, this),
                     products && products.map((product)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$admin$2f$_components$2f$product$2e$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                             product: product
                         }, product._id, false, {
                             fileName: "[project]/app/admin/products/page.tsx",
-                            lineNumber: 28,
+                            lineNumber: 42,
                             columnNumber: 7
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 22,
+                lineNumber: 36,
                 columnNumber: 4
             }, this)
         ]
