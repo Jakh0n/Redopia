@@ -17,6 +17,7 @@ export interface ReturnActionType {
 	failure: string
 	status: number
 	products: IProduct[]
+	isNext: boolean
 }
 
 export interface IProduct {

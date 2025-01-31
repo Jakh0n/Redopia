@@ -21,27 +21,30 @@ const AdminController = new (class {
 		const skipAmmount = (+page - 1) * +pageSize
 		const query = {}
 
-		if (searchQuery) {
-			const escapedSearchQuery = searchQuery.replace(
-				/[.*+?^${}()|[\]\\]/g,
-				'\\$&'
-			)
-			query.$or = [{ title: { $regex: new RegExp(escapedSearchQuery, 'i') } }]
-		}
-		if (category === 'All') query.category = { $exists: true }
-		else if (category !== 'All') {
-			if (category) query.category = category
-		}
-		let sortOptions = { createdAt: -1 }
-		if (filter === 'newest') sortOptions = { createdAt: -1 }
-		else if (filter === 'oldest') sortOptions = { createdAt: 1 }
 		try {
+			if (searchQuery) {
+				const escapedSearchQuery = searchQuery.replace(
+					/[.*+?^${}()|[\]\\]/g,
+					'\\$&'
+				)
+				query.$or = [{ title: { $regex: new RegExp(escapedSearchQuery, 'i') } }]
+			}
+			if (category === 'All') query.category = { $exists: true }
+			else if (category !== 'All') {
+				if (category) query.category = category
+			}
+			let sortOptions = { createdAt: -1 }
+			if (filter === 'newest') sortOptions = { createdAt: -1 }
+			else if (filter === 'oldest') sortOptions = { createdAt: 1 }
 			const products = await productModel
 				.find(query)
 				.sort(sortOptions)
 				.skip(skipAmmount)
 				.limit(+pageSize)
-			return res.json({ products })
+
+			const totalProducts = await productModel.countDocuments(query)
+			const isNext = totalProducts > skipAmmount + +products.length
+			return res.json({ products, isNext })
 		} catch (error) {
 			next(error)
 		}

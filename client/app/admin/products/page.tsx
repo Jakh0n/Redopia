@@ -6,6 +6,7 @@ import Filter from '@/components/shared/filter'
 import { getProducts } from '@/actions/admin.action'
 import { SearchParams } from '@/types'
 import { FC } from 'react'
+import Pagination from '@/components/shared/pagination'
 
 interface Props {
 	searchParams: SearchParams
@@ -22,6 +23,7 @@ const Page: FC<Props> = async props => {
 		page: `${searchParams.page || '1'}`,
 	})
 	const products = res?.data?.products
+	const isNext = res?.data?.isNext || false
 	return (
 		<>
 			<div className='flex justify-between items-center w-full'>
@@ -42,6 +44,10 @@ const Page: FC<Props> = async props => {
 						<ProductCard key={product._id} product={product} />
 					))}
 			</div>
+			<Pagination
+				isNext={isNext}
+				pageNumber={searchParams?.page ? +searchParams.page : 1}
+			/>
 		</>
 	)
 }

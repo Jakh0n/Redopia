@@ -3,6 +3,5 @@
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
   "/admin/(customers)/page": "app/admin/(customers)/page.js",
-  "/admin/products/page": "app/admin/products/page.js",
-  "/api/uploadthing/route": "app/api/uploadthing/route.js"
+  "/admin/products/page": "app/admin/products/page.js"
 }
