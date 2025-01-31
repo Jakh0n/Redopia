@@ -4,7 +4,7 @@ import { axiosClient } from '@/http/axios'
 import { authOptions } from '@/lib/auth-options'
 import { generateToken } from '@/lib/generate-token'
 import { actionClient } from '@/lib/safe-action'
-import { productSchema, updateProductSchema } from '@/lib/validation'
+import { idSchema, productSchema, updateProductSchema } from '@/lib/validation'
 import { ReturnActionType } from '@/types'
 import { getServerSession } from 'next-auth'
 import { revalidatePath } from 'next/cache'
@@ -42,6 +42,20 @@ export const updateProduct = actionClient
 			`/api/admin/update-product/${parsedInput.id}`,
 			{ ...parsedInput, price: parseFloat(parsedInput.price) },
 			{ headers: { Authorization: `Bearer ${token}` } }
+		)
+		revalidatePath('/admin/products')
+		return JSON.parse(JSON.stringify(data))
+	})
+export const deleteProduct = actionClient
+	.schema(idSchema)
+	.action<ReturnActionType>(async ({ parsedInput }) => {
+		const session = await getServerSession(authOptions)
+		const token = await generateToken(session?.currentUser?._id)
+		const { data } = await axiosClient.delete(
+			`/api/admin/delete-product/${parsedInput.id}`,
+			{
+				headers: { Authorization: `Bearer ${token}` },
+			}
 		)
 		revalidatePath('/admin/products')
 		return JSON.parse(JSON.stringify(data))

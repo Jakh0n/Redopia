@@ -1,5 +1,6 @@
 'use client'
 
+import { deleteProduct } from '@/actions/admin.action'
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -14,7 +15,9 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import UseAction from '@/hooks/use-action'
 import { useProduct } from '@/hooks/use-product'
+import { toast } from '@/hooks/use-toast'
 import { formatPrice } from '@/lib/utils'
 import { IProduct } from '@/types'
 import Image from 'next/image'
@@ -26,10 +29,26 @@ interface Props {
 }
 const ProductCard: FC<Props> = ({ product }) => {
 	const { setOpen, setProduct } = useProduct()
+	const { isLoading, onError, setIsLoading } = UseAction()
 
 	const onEdit = () => {
 		setOpen(true)
 		setProduct(product)
+	}
+
+	async function onDelete() {
+		setIsLoading(true)
+		const res = await deleteProduct({ id: product._id })
+		if (res?.serverError || res?.validationErrors) {
+			return onError('Something went ')
+		}
+		if (res?.data?.failure) {
+			return onError(res.data.failure)
+		}
+		if (res?.data?.status === 200) {
+			toast({ description: 'Product Deleted Successfully' })
+			setIsLoading(false)
+		}
 	}
 
 	return (
@@ -75,8 +94,10 @@ const ProductCard: FC<Props> = ({ product }) => {
 							</AlertDialogDescription>
 						</AlertDialogHeader>
 						<AlertDialogFooter>
-							<AlertDialogCancel>Cancel</AlertDialogCancel>
-							<AlertDialogAction>Continue</AlertDialogAction>
+							<AlertDialogCancel disabled={isLoading}>Cancel</AlertDialogCancel>
+							<AlertDialogAction onClick={onDelete} disabled={isLoading}>
+								Continue
+							</AlertDialogAction>
 						</AlertDialogFooter>
 					</AlertDialogContent>
 				</AlertDialog>

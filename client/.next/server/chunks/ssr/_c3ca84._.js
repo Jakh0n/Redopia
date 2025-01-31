@@ -201,11 +201,13 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 __turbopack_esm__({
     "emailSchema": (()=>emailSchema),
     "fullNameSchema": (()=>fullNameSchema),
+    "idSchema": (()=>idSchema),
     "loginSchema": (()=>loginSchema),
     "otpSchema": (()=>otpSchema),
     "passwordSchema": (()=>passwordSchema),
     "productSchema": (()=>productSchema),
     "registerSchema": (()=>registerSchema),
+    "updateProductSchema": (()=>updateProductSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zod/lib/index.mjs [app-rsc] (ecmascript)");
@@ -260,6 +262,12 @@ const productSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
     image: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string(),
     imageKey: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()
 });
+const updateProductSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].object({
+    id: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()
+}).merge(productSchema);
+const idSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].object({
+    id: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()
+});
 const passwordSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].object({
     oldPassword: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().min(6, {
         message: 'Password must be at least 6 characters'
@@ -282,10 +290,12 @@ const passwordSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"7f0c04b9bb8280c4b1004058763525f894556cddc1":"getProducts","7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b":"createProduct","7f62d54b8e116e26510c85ab88dab6b5f596b64a42":"deleteFile"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"7f0c04b9bb8280c4b1004058763525f894556cddc1":"getProducts","7f4c8bcb0ada6723f8e67995350134120d7f3f67ea":"updateProduct","7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a":"deleteProduct","7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b":"createProduct","7f62d54b8e116e26510c85ab88dab6b5f596b64a42":"deleteFile"} */ __turbopack_esm__({
     "createProduct": (()=>createProduct),
     "deleteFile": (()=>deleteFile),
-    "getProducts": (()=>getProducts)
+    "deleteProduct": (()=>deleteProduct),
+    "getProducts": (()=>getProducts),
+    "updateProduct": (()=>updateProduct)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$app$2d$render$2f$encryption$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/app-render/encryption.js [app-rsc] (ecmascript)");
@@ -333,6 +343,31 @@ const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createProduct = __TURBOPACK__imp
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/admin/products');
     return JSON.parse(JSON.stringify(data));
 });
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateProduct = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateProductSchema"]).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].put(`/api/admin/update-product/${parsedInput.id}`, {
+        ...parsedInput,
+        price: parseFloat(parsedInput.price)
+    }, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/admin/products');
+    return JSON.parse(JSON.stringify(data));
+});
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteProduct = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["idSchema"]).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].delete(`/api/admin/delete-product/${parsedInput.id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/admin/products');
+    return JSON.parse(JSON.stringify(data));
+});
 const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteFile = async (key)=>{
     await utapi.deleteFiles(key);
 };
@@ -340,10 +375,14 @@ const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteFile = async (key)=>{
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     getProducts,
     createProduct,
+    updateProduct,
+    deleteProduct,
     deleteFile
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getProducts, "7f0c04b9bb8280c4b1004058763525f894556cddc1", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createProduct, "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateProduct, "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteProduct, "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteFile, "7f62d54b8e116e26510c85ab88dab6b5f596b64a42", null);
 }}),
 "[project]/app/admin/products/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
@@ -452,6 +491,8 @@ __turbopack_esm__({});
 ;
 ;
 ;
+;
+;
 }}),
 "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript) <module evaluation>": ((__turbopack_context__) => {
 "use strict";
@@ -471,6 +512,8 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 __turbopack_esm__({
     "7f0c04b9bb8280c4b1004058763525f894556cddc1": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"]),
+    "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateProduct"]),
+    "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteProduct"]),
     "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createProduct"]),
     "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteFile"])
 });
@@ -486,6 +529,8 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 __turbopack_esm__({
     "7f0c04b9bb8280c4b1004058763525f894556cddc1": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f0c04b9bb8280c4b1004058763525f894556cddc1"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15"]),
+    "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f4c8bcb0ada6723f8e67995350134120d7f3f67ea"]),
+    "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a"]),
     "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b"]),
     "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$admin$2f$products$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$admin$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f62d54b8e116e26510c85ab88dab6b5f596b64a42"])
 });

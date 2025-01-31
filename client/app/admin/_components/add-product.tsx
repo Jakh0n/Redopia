@@ -187,7 +187,7 @@ const AddProduct = () => {
 												</SelectTrigger>
 											</FormControl>
 											<SelectContent>
-												{categories.map(category => (
+												{categories.slice(1).map(category => (
 													<SelectItem value={category} key={category}>
 														{category}
 													</SelectItem>

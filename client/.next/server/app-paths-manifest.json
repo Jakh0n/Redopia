@@ -2,9 +2,7 @@
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
-  "/(auth)/sign-up/page": "app/(auth)/sign-up/page.js",
   "/admin/(customers)/page": "app/admin/(customers)/page.js",
   "/admin/products/page": "app/admin/products/page.js",
-  "/api/uploadthing/route": "app/api/uploadthing/route.js",
-  "/admin/orders/page": "app/admin/orders/page.js"
+  "/api/uploadthing/route": "app/api/uploadthing/route.js"
 }

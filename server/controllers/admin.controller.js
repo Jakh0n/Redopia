@@ -122,15 +122,10 @@ const AdminController = new (class {
 	async deleteProduct(req, res, next) {
 		try {
 			const { id } = req.params
-			const userId = this.userId
-			const user = await userModel.findById(userId)
-			if (!user) return res.json({ failure: 'User not found' })
-			if (user.role !== 'admin')
-				return res.json({ failure: 'User is not admin' })
 			const deletedProduct = await productModel.findByIdAndDelete(id)
 			if (!deletedProduct)
 				return res.json({ failure: 'Failed while deleting product' })
-			return res.json({ success: 'Product deleted successfully' })
+			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)
 		}
