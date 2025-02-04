@@ -18,6 +18,8 @@ export interface ReturnActionType {
 	status: number
 	products: IProduct[]
 	isNext: boolean
+	customers: IUser[]
+	orders: IOrder[]
 }
 
 export interface IProduct {
@@ -43,4 +45,14 @@ export interface IUser {
 	isDeleted: boolean
 	deletedAt: Date
 	favorites: IProduct[]
+}
+
+export interface IOrder {
+	_id: string
+	user: IUser
+	product: IProduct
+	createdAt: Date
+	price: number
+	status: string
+	updatedAt: Date
 }

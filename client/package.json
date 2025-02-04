@@ -27,6 +27,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "generate-token": "^1.0.1",
     "input-otp": "^1.4.2",
     "jsonwebtoken": "^9.0.2",
