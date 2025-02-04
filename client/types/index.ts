@@ -20,6 +20,7 @@ export interface ReturnActionType {
 	isNext: boolean
 	customers: IUser[]
 	orders: IOrder[]
+	transactions: ITransaction[]
 }
 
 export interface IProduct {
@@ -55,4 +56,18 @@ export interface IOrder {
 	price: number
 	status: string
 	updatedAt: Date
+}
+
+export interface ITransaction {
+	_id: string
+	id: string
+	user: IUser
+	product: IProduct
+	state: number
+	amount: number
+	create_time: number
+	perform_time: number
+	cancel_time: number
+	reason: number
+	provider: string
 }
