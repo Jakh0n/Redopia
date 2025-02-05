@@ -10,14 +10,13 @@ import React, { FC } from 'react'
 interface Props {
 	searchParams: SearchParams
 }
-const Page: FC<Props> = async props => {
-	const searchParams = await props.searchParams
-
+const Page = async ({ searchParams }: Props) => {
+	const { q, filter, category, page } = await searchParams
 	const res = await getProducts({
-		searchQuery: `${searchParams.q || ''}`,
-		filter: `${searchParams.filter || ''}`,
-		category: `${searchParams.category || ''}`,
-		page: `${searchParams.page || '1'}`,
+		searchQuery: `${q || ''}`,
+		filter: `${filter || ''}`,
+		category: `${category || ''}`,
+		page: `${page || '1'}`,
 	})
 
 	const products = res?.data?.products
@@ -38,10 +37,7 @@ const Page: FC<Props> = async props => {
 						<ProductCard key={product._id} product={product} />
 					))}
 			</div>
-			<Pagination
-				isNext={isNext}
-				pageNumber={searchParams?.page ? +searchParams.page : 1}
-			/>
+			<Pagination isNext={isNext} pageNumber={page ? +page : 1} />
 		</>
 	)
 }

@@ -9,7 +9,6 @@ class UserController {
 	async getProducts(req, res, next) {
 		try {
 			const { searchQuery, filter, category, page, pageSize } = req.query
-
 			const skipAmount = (+page - 1) * +pageSize
 			const query = {}
 
@@ -113,11 +112,16 @@ class UserController {
 	async addFavorite(req, res, next) {
 		try {
 			const { productId } = req.body
-			const userId = '67420187ce7f12bf6ec22428'
-			const user = await userModel.findById(userId)
-			user.favorites.push(productId)
-			await user.save()
-			return res.json(user)
+			const userId = req.user._id
+			const isExist = await userModel.findOne({
+				_id: userId,
+				favorites: productId,
+			})
+			if (isExist) return res.json({ failure: 'Product already in favorites' })
+			await userModel.findByIdAndUpdate(userId, {
+				$push: { favorites: productId },
+			})
+			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)
 		}

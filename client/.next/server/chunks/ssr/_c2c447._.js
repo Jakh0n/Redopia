@@ -375,13 +375,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separato
 ;
 ;
 ;
-const Page = async (props)=>{
-    const searchParams = await props.searchParams;
+const Page = async ({ searchParams })=>{
+    const { q, filter, category, page } = await searchParams;
     const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"])({
-        searchQuery: `${searchParams.q || ''}`,
-        filter: `${searchParams.filter || ''}`,
-        category: `${searchParams.category || ''}`,
-        page: `${searchParams.page || '1'}`
+        searchQuery: `${q || ''}`,
+        filter: `${filter || ''}`,
+        category: `${category || ''}`,
+        page: `${page || '1'}`
     });
     const products = res?.data?.products;
     const isNext = res?.data?.isNext || false;
@@ -395,25 +395,25 @@ const Page = async (props)=>{
                         children: "Products"
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/(home)/page.tsx",
-                        lineNumber: 29,
+                        lineNumber: 28,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shared$2f$filter$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/(root)/(home)/page.tsx",
-                        lineNumber: 30,
+                        lineNumber: 29,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/(home)/page.tsx",
-                lineNumber: 28,
+                lineNumber: 27,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Separator"], {
                 className: "my-4"
             }, void 0, false, {
                 fileName: "[project]/app/(root)/(home)/page.tsx",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -422,20 +422,20 @@ const Page = async (props)=>{
                         product: product
                     }, product._id, false, {
                         fileName: "[project]/app/(root)/(home)/page.tsx",
-                        lineNumber: 38,
+                        lineNumber: 37,
                         columnNumber: 7
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/(root)/(home)/page.tsx",
-                lineNumber: 35,
+                lineNumber: 34,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shared$2f$pagination$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 isNext: isNext,
-                pageNumber: searchParams?.page ? +searchParams.page : 1
+                pageNumber: page ? +page : 1
             }, void 0, false, {
                 fileName: "[project]/app/(root)/(home)/page.tsx",
-                lineNumber: 41,
+                lineNumber: 40,
                 columnNumber: 4
             }, this)
         ]

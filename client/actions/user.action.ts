@@ -23,6 +23,7 @@ export const getProduct = actionClient
 		const { data } = await axiosClient.get(
 			`/api/user/product/${parsedInput.id}`
 		)
+
 		return JSON.parse(JSON.stringify(data))
 	})
 
