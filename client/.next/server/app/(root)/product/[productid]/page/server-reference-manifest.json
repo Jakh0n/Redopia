@@ -1,4 +1,49 @@
 {
-  "node": {},
+  "node": {
+    "7f63718cafa004d68a0b180e6478b68ff5657594c2": {
+      "workers": {
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/product/[productId]/page": "rsc"
+      }
+    },
+    "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": {
+      "workers": {
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/product/[productId]/page": "rsc"
+      }
+    },
+    "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": {
+      "workers": {
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/product/[productId]/page": "rsc"
+      }
+    },
+    "7f7c9a35e928352920c68e2834be9e721948b93d8d": {
+      "workers": {
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/product/[productId]/page": "rsc"
+      }
+    }
+  },
   "edge": {}
 }

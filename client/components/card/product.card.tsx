@@ -3,45 +3,65 @@
 import { IProduct } from '@/types'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import React from 'react'
+import { FC, MouseEvent } from 'react'
 import { Button } from '../ui/button'
 import { Heart } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
 import NoSSR from 'react-no-ssr'
+import useAction from '@/hooks/use-action'
+import { addFavorite } from '@/actions/user.action'
+import { toast } from '@/hooks/use-toast'
+
 interface Props {
-	product: Partial<IProduct>
+	product: IProduct
 }
-function ProductCard({ product }: Props) {
+const ProductCard: FC<Props> = ({ product }) => {
+	const { isLoading, onError, setIsLoading } = useAction()
 	const router = useRouter()
+
+	const onFavourite = async (e: MouseEvent) => {
+		e.stopPropagation()
+		setIsLoading(true)
+		const res = await addFavorite({ id: product._id })
+		if (res?.serverError || res?.validationErrors || !res?.data) {
+			return onError('Something went wrong')
+		}
+		if (res.data.failure) {
+			return onError(res.data.failure)
+		}
+		if (res.data.status === 200) {
+			toast({ description: 'Added to favorites' })
+			setIsLoading(false)
+		}
+	}
+
 	return (
-		<>
-			<div
-				className='cursor-pointer'
-				onClick={() => router.push(`/product/${product._id}`)}
-			>
-				<div className='group relative bg-secondary'>
-					<Image
-						src={product.image!}
-						alt={product.title!}
-						width={300}
-						height={300}
-						className='mx-auto'
-					/>
-					<div className='absolute right-0 top-0 z-50 opacity-0 group-hover:opacity-100 transition-all'>
-						<Button size={'icon'}>
-							<Heart />
-						</Button>
-					</div>
+		<div
+			onClick={() => router.push(`/product/${product._id}`)}
+			className='cursor-pointer'
+		>
+			<div className='bg-secondary relative group'>
+				<Image
+					src={product.image!}
+					width={300}
+					height={300}
+					className='mx-auto'
+					alt={product.title!}
+				/>
+				<div className='absolute right-0 top-0 z-50 opacity-0 group-hover:opacity-100 transition-all'>
+					<Button size={'icon'} disabled={isLoading} onClick={onFavourite}>
+						<Heart />
+					</Button>
 				</div>
-				<div className='flex items-center justify-between mt-2'>
-					<h1 className='font-bold'>{product.title}</h1>
-					<NoSSR>
-						<p className='font-medium'>{formatPrice(product.price!)}</p>
-					</NoSSR>
-				</div>
-				<p className='text-muted-foreground text-xs'>{product.description}</p>
 			</div>
-		</>
+			<div className='flex justify-between items-center mt-2 text-sm'>
+				<h1 className='font-bold line-clamp-1'>{product.title}</h1>
+				<NoSSR>
+					<p className='font-medium'>{formatPrice(product.price!)}</p>
+				</NoSSR>
+			</div>
+			<p className='text-xs text-muted-foreground'>{product.category}</p>
+		</div>
 	)
 }
 

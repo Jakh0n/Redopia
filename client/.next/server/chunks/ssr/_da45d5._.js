@@ -360,7 +360,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$root$292f$product$2
 ;
 ;
 ;
-const Page = ()=>{
+const Page = async ({ params })=>{
+    const { productId } = await params;
+    console.log(productId);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "grid grid-cols-1 md:grid-cols-3 gap-4",
         children: [
@@ -373,12 +375,12 @@ const Page = ()=>{
                     alt: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["products"][0].title
                 }, void 0, false, {
                     fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                    lineNumber: 11,
+                    lineNumber: 19,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                lineNumber: 10,
+                lineNumber: 18,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -389,7 +391,7 @@ const Page = ()=>{
                         children: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["products"][0].title
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 19,
+                        lineNumber: 27,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -401,7 +403,7 @@ const Page = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 20,
+                        lineNumber: 28,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -409,7 +411,7 @@ const Page = ()=>{
                         children: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["products"][0].description
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 23,
+                        lineNumber: 31,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -417,12 +419,12 @@ const Page = ()=>{
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatPrice"])(+__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["products"][0].price)
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 26,
+                        lineNumber: 34,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$root$292f$product$2f$_components$2f$crete$2d$order$2e$btn$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 27,
+                        lineNumber: 35,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -430,19 +432,19 @@ const Page = ()=>{
                         children: "Your purchase is secure with us. We do not store any credit card information. We use Payme for payment processing."
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                        lineNumber: 28,
+                        lineNumber: 36,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-                lineNumber: 18,
+                lineNumber: 26,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(root)/product/[productid]/page.tsx",
-        lineNumber: 9,
+        lineNumber: 17,
         columnNumber: 3
     }, this);
 };

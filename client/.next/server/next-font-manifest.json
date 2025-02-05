@@ -4,6 +4,10 @@
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ],
+    "[project]/app/(root)/product/[productId]/page": [
+      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
+    ],
     "[project]/app/(auth)/sign-in/page": [
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
@@ -13,14 +17,6 @@
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ],
     "[project]/app/admin/products/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/admin/orders/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/admin/payments/page": [
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ]

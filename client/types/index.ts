@@ -1,10 +1,11 @@
-import { products } from '@/constants'
 export interface ChildProps {
 	children: React.ReactNode
 }
+
 export type SearchParams = Promise<{
 	[key: string]: string | string[] | undefined
 }>
+export type Params = Promise<{ productId: string }>
 
 export interface QueryProps {
 	params: string
@@ -16,8 +17,9 @@ export interface ReturnActionType {
 	user: IUser
 	failure: string
 	status: number
-	products: IProduct[]
 	isNext: boolean
+	products: IProduct[]
+	product: IProduct
 	customers: IUser[]
 	orders: IOrder[]
 	transactions: ITransaction[]
