@@ -32,6 +32,15 @@ export const getProduct = actionClient
 		return JSON.parse(JSON.stringify(data))
 	})
 
+export const getStatistics = actionClient.action<ReturnActionType>(async () => {
+	const session = await getServerSession(authOptions)
+	const token = await generateToken(session?.currentUser?._id)
+	const { data } = await axiosClient.get('/api/user/statistics', {
+		headers: { Authorization: `Bearer ${token}` },
+	})
+	return JSON.parse(JSON.stringify(data))
+})
+
 export const addFavorite = actionClient
 	.schema(idSchema)
 	.action<ReturnActionType>(async ({ parsedInput }) => {

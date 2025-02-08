@@ -3,5 +3,8 @@
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
-  "/api/uploadthing/route": "app/api/uploadthing/route.js"
+  "/api/uploadthing/route": "app/api/uploadthing/route.js",
+  "/dashboard/watch-list/page": "app/dashboard/watch-list/page.js",
+  "/dashboard/orders/page": "app/dashboard/orders/page.js",
+  "/dashboard/payments/page": "app/dashboard/payments/page.js"
 }

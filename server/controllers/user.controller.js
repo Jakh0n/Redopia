@@ -94,16 +94,16 @@ class UserController {
 	// [GET] /user/statistics
 	async getStatistics(req, res, next) {
 		try {
-			const userId = '67420187ce7f12bf6ec22428'
+			const userId = req.user._id
 			const user = await userModel.findById(userId)
-
+			if (!user) return res.json({ failure: 'User not found' })
 			const totalOrders = await orderModel.countDocuments({ user: user._id })
 			const totalTransactions = await transactionModel.countDocuments({
 				user: user._id,
 			})
 			const totalFavourites = user.favorites.length
-
-			return res.json({ totalOrders, totalTransactions, totalFavourites })
+			const statistics = { totalOrders, totalTransactions, totalFavourites }
+			return res.json({ statistics })
 		} catch (error) {
 			next(error)
 		}

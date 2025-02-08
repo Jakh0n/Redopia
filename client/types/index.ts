@@ -23,6 +23,11 @@ export interface ReturnActionType {
 	customers: IUser[]
 	orders: IOrder[]
 	transactions: ITransaction[]
+	statistics: {
+		totalOrders: number
+		totalTransactions: number
+		totalFavourites: number
+	}
 }
 
 export interface IProduct {
