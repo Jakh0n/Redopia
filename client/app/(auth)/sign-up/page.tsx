@@ -148,7 +148,11 @@ const SignUpPage = () => {
 							</FormItem>
 						)}
 					/>
-					<Button type='submit'>Submit</Button>
+					{!isVerifying && (
+						<Button type='submit' disabled={isLoading}>
+							Submit {isLoading && <Loader className='animate-spin' />}
+						</Button>
+					)}
 				</form>
 			</Form>
 			{isVerifying && (
