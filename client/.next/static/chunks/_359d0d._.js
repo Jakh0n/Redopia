@@ -615,6 +615,7 @@ __turbopack_esm__({
     "registerSchema": (()=>registerSchema),
     "searchParamsSchema": (()=>searchParamsSchema),
     "updateProductSchema": (()=>updateProductSchema),
+    "updateUserSchema": (()=>updateUserSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zod/lib/index.mjs [app-client] (ecmascript)");
@@ -697,6 +698,14 @@ const searchParamsSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_
     category: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().optional(),
     page: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().default('1'),
     pageSize: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().default('3')
+});
+const updateUserSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].object({
+    fullName: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    email: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    avatar: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    avatarKey: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].string().optional(),
+    isDeleted: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].boolean().optional(),
+    deletedAt: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["z"].date().optional()
 });
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
@@ -993,13 +1002,23 @@ const SignUpPage = ()=>{
                             lineNumber: 138,
                             columnNumber: 6
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                        !isVerifying && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                             type: "submit",
-                            children: "Submit"
-                        }, void 0, false, {
+                            disabled: isLoading,
+                            children: [
+                                "Submit ",
+                                isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader$3e$__["Loader"], {
+                                    className: "animate-spin"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/(auth)/sign-up/page.tsx",
+                                    lineNumber: 153,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                            lineNumber: 151,
-                            columnNumber: 6
+                            lineNumber: 152,
+                            columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
@@ -1028,7 +1047,7 @@ const SignUpPage = ()=>{
                                             children: "Enter OTP"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 169,
                                             columnNumber: 10
                                         }, void 0),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1042,32 +1061,32 @@ const SignUpPage = ()=>{
                                                                 index: 0
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 169,
+                                                                lineNumber: 173,
                                                                 columnNumber: 13
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPSlot"], {
                                                                 index: 1
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 170,
+                                                                lineNumber: 174,
                                                                 columnNumber: 13
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPSlot"], {
                                                                 index: 2
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 171,
+                                                                lineNumber: 175,
                                                                 columnNumber: 13
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 172,
                                                         columnNumber: 12
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPSeparator"], {}, void 0, false, {
                                                         fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 177,
                                                         columnNumber: 12
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPGroup"], {
@@ -1076,56 +1095,56 @@ const SignUpPage = ()=>{
                                                                 index: 3
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 175,
+                                                                lineNumber: 179,
                                                                 columnNumber: 13
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPSlot"], {
                                                                 index: 4
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 176,
+                                                                lineNumber: 180,
                                                                 columnNumber: 13
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$otp$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputOTPSlot"], {
                                                                 index: 5
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                                lineNumber: 177,
+                                                                lineNumber: 181,
                                                                 columnNumber: 13
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 178,
                                                         columnNumber: 12
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 171,
                                                 columnNumber: 11
                                             }, void 0)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 170,
                                             columnNumber: 10
                                         }, void 0),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {
                                             className: "text-xs text-red-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                            lineNumber: 181,
+                                            lineNumber: 185,
                                             columnNumber: 10
                                         }, void 0)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 168,
                                     columnNumber: 9
                                 }, void 0)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                            lineNumber: 160,
+                            lineNumber: 164,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1140,13 +1159,13 @@ const SignUpPage = ()=>{
                                             className: "animate-spin"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 191,
                                             columnNumber: 30
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 190,
                                     columnNumber: 8
                                 }, this),
                                 isResend && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1159,30 +1178,30 @@ const SignUpPage = ()=>{
                                             className: "animate-spin"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 199,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 194,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                            lineNumber: 185,
+                            lineNumber: 189,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                    lineNumber: 156,
+                    lineNumber: 160,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                lineNumber: 155,
+                lineNumber: 159,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1201,23 +1220,23 @@ const SignUpPage = ()=>{
                                 children: "Sign in"
                             }, void 0, false, {
                                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                                lineNumber: 206,
+                                lineNumber: 210,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                            lineNumber: 205,
+                            lineNumber: 209,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                    lineNumber: 203,
+                    lineNumber: 207,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(auth)/sign-up/page.tsx",
-                lineNumber: 202,
+                lineNumber: 206,
                 columnNumber: 4
             }, this)
         ]

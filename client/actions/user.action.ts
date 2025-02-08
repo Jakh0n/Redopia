@@ -6,6 +6,7 @@ import { generateToken } from '@/lib/generate-token'
 import { actionClient } from '@/lib/safe-action'
 import {
 	idSchema,
+	passwordSchema,
 	searchParamsSchema,
 	updateUserSchema,
 } from '@/lib/validation'
@@ -70,5 +71,22 @@ export const updateUser = actionClient
 			}
 		)
 		revalidatePath('/dashboard')
+		return JSON.parse(JSON.stringify(data))
+	})
+
+export const updatePassword = actionClient
+	.schema(passwordSchema)
+	.action<ReturnActionType>(async ({ parsedInput }) => {
+		const session = await getServerSession(authOptions)
+		if (!session?.currentUser)
+			return { failure: 'You must be logged in to add a favorite' }
+		const token = await generateToken(session?.currentUser?._id)
+		const { data } = await axiosClient.put(
+			'/api/user/update-password',
+			parsedInput,
+			{
+				headers: { Authorization: `Bearer ${token}` },
+			}
+		)
 		return JSON.parse(JSON.stringify(data))
 	})

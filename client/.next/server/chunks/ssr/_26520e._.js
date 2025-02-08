@@ -231,11 +231,12 @@ const updateUserSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"7f63718cafa004d68a0b180e6478b68ff5657594c2":"getProduct","7f6b15dcd9abc968b4f60338fc1493a6811456104f":"updateUser","7f7c9a35e928352920c68e2834be9e721948b93d8d":"getProducts","7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b":"getStatistics","7febac6cdb5065a746c7dd304cd7f8e945499cb51c":"addFavorite"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"7f63718cafa004d68a0b180e6478b68ff5657594c2":"getProduct","7f68ee945eb42e5eda68810a0dddf54c98174dcacb":"updatePassword","7f6b15dcd9abc968b4f60338fc1493a6811456104f":"updateUser","7f7c9a35e928352920c68e2834be9e721948b93d8d":"getProducts","7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b":"getStatistics","7febac6cdb5065a746c7dd304cd7f8e945499cb51c":"addFavorite"} */ __turbopack_esm__({
     "addFavorite": (()=>addFavorite),
     "getProduct": (()=>getProduct),
     "getProducts": (()=>getProducts),
     "getStatistics": (()=>getStatistics),
+    "updatePassword": (()=>updatePassword),
     "updateUser": (()=>updateUser)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
@@ -306,19 +307,50 @@ const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateUser = __TURBOPACK__import
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/dashboard');
     return JSON.parse(JSON.stringify(data));
 });
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateUser = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateUserSchema"]).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    if (!session?.currentUser) return {
+        failure: 'You must be logged in to add a favorite'
+    };
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].put('/api/user/update-profile', parsedInput, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/dashboard');
+    return JSON.parse(JSON.stringify(data));
+});
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updatePassword = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(passwordSchema).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    if (!session?.currentUser) return {
+        failure: 'You must be logged in to add a favorite'
+    };
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].put('/api/user/update-password', parsedInput, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    return JSON.parse(JSON.stringify(data));
+});
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     getProducts,
     getProduct,
     getStatistics,
     addFavorite,
-    updateUser
+    updateUser,
+    updateUser,
+    updatePassword
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getProducts, "7f7c9a35e928352920c68e2834be9e721948b93d8d", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getProduct, "7f63718cafa004d68a0b180e6478b68ff5657594c2", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getStatistics, "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(addFavorite, "7febac6cdb5065a746c7dd304cd7f8e945499cb51c", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateUser, "7f6b15dcd9abc968b4f60338fc1493a6811456104f", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateUser, "7f6b15dcd9abc968b4f60338fc1493a6811456104f", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updatePassword, "7f68ee945eb42e5eda68810a0dddf54c98174dcacb", null);
 }}),
 "[project]/app/dashboard/(personal-information)/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -583,6 +615,7 @@ __turbopack_esm__({});
 ;
 ;
 ;
+;
 }}),
 "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript) <module evaluation>": ((__turbopack_context__) => {
 "use strict";
@@ -606,6 +639,7 @@ __turbopack_esm__({
     "7f1177758187559a97f0b3e572320ee1f872a136e3": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["login"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"]),
     "7f63718cafa004d68a0b180e6478b68ff5657594c2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProduct"]),
+    "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updatePassword"]),
     "7f6b15dcd9abc968b4f60338fc1493a6811456104f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateUser"]),
     "7f7c9a35e928352920c68e2834be9e721948b93d8d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"]),
     "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getStatistics"]),
@@ -628,6 +662,7 @@ __turbopack_esm__({
     "7f1177758187559a97f0b3e572320ee1f872a136e3": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f1177758187559a97f0b3e572320ee1f872a136e3"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15"]),
     "7f63718cafa004d68a0b180e6478b68ff5657594c2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f63718cafa004d68a0b180e6478b68ff5657594c2"]),
+    "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f68ee945eb42e5eda68810a0dddf54c98174dcacb"]),
     "7f6b15dcd9abc968b4f60338fc1493a6811456104f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f6b15dcd9abc968b4f60338fc1493a6811456104f"]),
     "7f7c9a35e928352920c68e2834be9e721948b93d8d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f7c9a35e928352920c68e2834be9e721948b93d8d"]),
     "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f28$personal$2d$information$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$actions$2f$auth$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE2__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b"]),
