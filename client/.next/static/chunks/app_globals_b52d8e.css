@@ -780,6 +780,16 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: 2s cubic-bezier(.4, 0, .6, 1) infinite pulse;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -1050,6 +1060,10 @@ body {
 
 .bg-primary {
   background-color: hsl(var(--primary));
+}
+
+.bg-primary\/10 {
+  background-color: hsl(var(--primary) / .1);
 }
 
 .bg-secondary {
@@ -1381,6 +1395,10 @@ body {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-15 {
+  opacity: .15;
 }
 
 .opacity-50 {

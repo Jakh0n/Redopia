@@ -1,6 +1,7 @@
 {
+  "/dashboard/(personal-information)/page": "app/dashboard/(personal-information)/page.js",
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
-  "/(root)/product/[productId]/page": "app/(root)/product/[productId]/page.js"
+  "/api/uploadthing/route": "app/api/uploadthing/route.js"
 }

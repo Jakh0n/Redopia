@@ -1,13 +1,18 @@
 import { Separator } from '@/components/ui/separator'
 import { Banknote, Heart, Shuffle } from 'lucide-react'
 import EditInformation from './_components/edit-information'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/lib/auth-options'
 
-const Page = () => {
+const Page = async () => {
+	const session = await getServerSession(authOptions)
 	return (
 		<>
 			<h1 className='text-xl font-semibold'>Personal information</h1>
 			<Separator className='my-3' />
-			<EditInformation />
+			<EditInformation
+				user={JSON.parse(JSON.stringify(session?.currentUser))}
+			/>
 			<div className='grid grid-cols-3 gap-4'>
 				<div className='border-2 p-2 flex justify-center flex-col space-y-2 items-center shadow-md hover:animate-pulse transition-all cursor-pointer'>
 					<Shuffle size={50} />
