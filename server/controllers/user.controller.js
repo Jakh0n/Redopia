@@ -181,9 +181,42 @@ class UserController {
 	// [GET] /user/favorites
 	async getFavorites(req, res, next) {
 		try {
-			const userId = '67420187ce7f12bf6ec22428'
-			const user = await userModel.findById(userId).populate('favorites')
-			return res.json(user.favorites)
+			const currentUser = req.user
+			const { searchQuery, filter, page, pageSize, category } = req.query
+			const skipAmount = (page - 1) * pageSize
+
+			const user = await userModel.findById(currentUser._id)
+			const matchQuery = { _id: { $in: user.favorites } }
+
+			if (searchQuery) {
+				const escapedSearchQuery = searchQuery.replace(
+					/[.*+?^${}()|[\]\\]/g,
+					'\\$&'
+				)
+				matchQuery.$or = [
+					{ title: { $regex: new RegExp(escapedSearchQuery, 'i') } },
+				]
+			}
+
+			if (category === 'All') matchQuery.category = { $exists: true }
+			else if (category !== 'All') {
+				if (category) matchQuery.category = category
+			}
+
+			let sortOptions = {}
+			if (filter === 'newest') sortOptions = { createdAt: -1 }
+			else if (filter === 'oldest') sortOptions = { createdAt: 1 }
+
+			const products = await productModel
+				.find(matchQuery)
+				.sort(sortOptions)
+				.skip(skipAmount)
+				.limit(+pageSize)
+
+			const totalProducts = await productModel.countDocuments(matchQuery)
+			const isNext = totalProducts > skipAmount + +products.length
+
+			return res.json({ products, isNext })
 		} catch (error) {
 			next(error)
 		}
@@ -257,11 +290,11 @@ class UserController {
 	async deleteFavorite(req, res, next) {
 		try {
 			const { id } = req.params
-			const userId = '67420187ce7f12bf6ec22428'
+			const userId = req.user._id
 			const user = await userModel.findById(userId)
 			user.favorites.pull(id)
 			await user.save()
-			return res.json({ success: 'Product removed from favorites' })
+			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)
 		}

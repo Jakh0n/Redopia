@@ -155,8 +155,10 @@ const updateUserSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0":"getTransactions","7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6":"getOrders","7f63718cafa004d68a0b180e6478b68ff5657594c2":"getProduct","7f68ee945eb42e5eda68810a0dddf54c98174dcacb":"updatePassword","7f6b15dcd9abc968b4f60338fc1493a6811456104f":"updateUser","7f7c9a35e928352920c68e2834be9e721948b93d8d":"getProducts","7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b":"getStatistics","7febac6cdb5065a746c7dd304cd7f8e945499cb51c":"addFavorite"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0":"getTransactions","7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6":"getOrders","7f35f1558d5754e23ba421a432256fb5af9294d3e2":"getFavourites","7f63718cafa004d68a0b180e6478b68ff5657594c2":"getProduct","7f68ee945eb42e5eda68810a0dddf54c98174dcacb":"updatePassword","7f6b15dcd9abc968b4f60338fc1493a6811456104f":"updateUser","7f7c9a35e928352920c68e2834be9e721948b93d8d":"getProducts","7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b":"getStatistics","7fc45dc492d9209e4de1800722605be31f60cd005f":"deleteFavorite","7febac6cdb5065a746c7dd304cd7f8e945499cb51c":"addFavorite"} */ __turbopack_esm__({
     "addFavorite": (()=>addFavorite),
+    "deleteFavorite": (()=>deleteFavorite),
+    "getFavourites": (()=>getFavourites),
     "getOrders": (()=>getOrders),
     "getProduct": (()=>getProduct),
     "getProducts": (()=>getProducts),
@@ -208,6 +210,17 @@ const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getOrders = __TURBOPACK__importe
     const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
     const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
     const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].get('/api/user/orders', {
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
+        params: parsedInput
+    });
+    return JSON.parse(JSON.stringify(data));
+});
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getFavourites = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["searchParamsSchema"]).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].get('/api/user/favorites', {
         headers: {
             Authorization: `Bearer ${token}`
         },
@@ -268,25 +281,43 @@ const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updatePassword = __TURBOPACK__im
     });
     return JSON.parse(JSON.stringify(data));
 });
+const /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteFavorite = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$safe$2d$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["actionClient"].schema(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$validation$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["idSchema"]).action(async ({ parsedInput })=>{
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getServerSession"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$options$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["authOptions"]);
+    if (!session?.currentUser) return {
+        failure: 'You must be logged in to add a favorite'
+    };
+    const token = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"])(session?.currentUser?._id);
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$http$2f$axios$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["axiosClient"].delete(`/api/user/delete-favorite/${parsedInput.id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])('/dashboard/watch-list');
+    return JSON.parse(JSON.stringify(data));
+});
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     getProducts,
     getProduct,
     getStatistics,
     getOrders,
+    getFavourites,
     getTransactions,
     addFavorite,
     updateUser,
-    updatePassword
+    updatePassword,
+    deleteFavorite
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getProducts, "7f7c9a35e928352920c68e2834be9e721948b93d8d", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getProduct, "7f63718cafa004d68a0b180e6478b68ff5657594c2", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getStatistics, "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getOrders, "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getFavourites, "7f35f1558d5754e23ba421a432256fb5af9294d3e2", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getTransactions, "7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(addFavorite, "7febac6cdb5065a746c7dd304cd7f8e945499cb51c", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateUser, "7f6b15dcd9abc968b4f60338fc1493a6811456104f", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updatePassword, "7f68ee945eb42e5eda68810a0dddf54c98174dcacb", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteFavorite, "7fc45dc492d9209e4de1800722605be31f60cd005f", null);
 }}),
 "[project]/components/shared/filter.tsx (client proxy) <module evaluation>": ((__turbopack_context__) => {
 "use strict";
@@ -537,11 +568,18 @@ const Page = async (props)=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Table"], {
                 className: "text-sm",
                 children: [
+                    transactions && transactions.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableCaption"], {
+                        children: "A list of your recent transactions."
+                    }, void 0, false, {
+                        fileName: "[project]/app/dashboard/payments/page.tsx",
+                        lineNumber: 42,
+                        columnNumber: 6
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableCaption"], {
                         children: "A list of your recent orders."
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/payments/page.tsx",
-                        lineNumber: 41,
+                        lineNumber: 44,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableHeader"], {
@@ -551,21 +589,21 @@ const Page = async (props)=>{
                                     children: "Product"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 47,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableHead"], {
                                     children: "Provider"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 48,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableHead"], {
                                     children: "Status"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 49,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableHead"], {
@@ -573,18 +611,18 @@ const Page = async (props)=>{
                                     children: "Price"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 47,
+                                    lineNumber: 50,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/payments/page.tsx",
-                            lineNumber: 43,
+                            lineNumber: 46,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/payments/page.tsx",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -596,12 +634,12 @@ const Page = async (props)=>{
                                     children: "No transactions found."
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 56,
                                     columnNumber: 8
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/payments/page.tsx",
-                                lineNumber: 52,
+                                lineNumber: 55,
                                 columnNumber: 7
                             }, this),
                             transactions && transactions.map((transaction)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableRow"], {
@@ -610,21 +648,21 @@ const Page = async (props)=>{
                                             children: transaction.product.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/payments/page.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 64,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableCell"], {
                                             children: transaction.provider
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/payments/page.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 65,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableCell"], {
                                             children: transaction.state
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/payments/page.tsx",
-                                            lineNumber: 63,
+                                            lineNumber: 66,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -632,19 +670,19 @@ const Page = async (props)=>{
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatPrice"])(transaction.amount)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/payments/page.tsx",
-                                            lineNumber: 64,
+                                            lineNumber: 67,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, transaction._id, true, {
                                     fileName: "[project]/app/dashboard/payments/page.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 63,
                                     columnNumber: 8
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dashboard/payments/page.tsx",
-                        lineNumber: 50,
+                        lineNumber: 53,
                         columnNumber: 5
                     }, this)
                 ]
@@ -679,6 +717,8 @@ __turbopack_esm__({});
 ;
 ;
 ;
+;
+;
 }}),
 "[project]/.next-internal/server/app/dashboard/payments/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript) <module evaluation>": ((__turbopack_context__) => {
 "use strict";
@@ -699,11 +739,13 @@ __turbopack_esm__({
     "7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getTransactions"]),
     "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getOrders"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateToken"]),
+    "7f35f1558d5754e23ba421a432256fb5af9294d3e2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getFavourites"]),
     "7f63718cafa004d68a0b180e6478b68ff5657594c2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProduct"]),
     "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updatePassword"]),
     "7f6b15dcd9abc968b4f60338fc1493a6811456104f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateUser"]),
     "7f7c9a35e928352920c68e2834be9e721948b93d8d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProducts"]),
     "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getStatistics"]),
+    "7fc45dc492d9209e4de1800722605be31f60cd005f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteFavorite"]),
     "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addFavorite"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/actions/user.action.ts [app-rsc] (ecmascript)");
@@ -719,11 +761,13 @@ __turbopack_esm__({
     "7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0"]),
     "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6"]),
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15"]),
+    "7f35f1558d5754e23ba421a432256fb5af9294d3e2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f35f1558d5754e23ba421a432256fb5af9294d3e2"]),
     "7f63718cafa004d68a0b180e6478b68ff5657594c2": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f63718cafa004d68a0b180e6478b68ff5657594c2"]),
     "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f68ee945eb42e5eda68810a0dddf54c98174dcacb"]),
     "7f6b15dcd9abc968b4f60338fc1493a6811456104f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f6b15dcd9abc968b4f60338fc1493a6811456104f"]),
     "7f7c9a35e928352920c68e2834be9e721948b93d8d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f7c9a35e928352920c68e2834be9e721948b93d8d"]),
     "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b"]),
+    "7fc45dc492d9209e4de1800722605be31f60cd005f": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7fc45dc492d9209e4de1800722605be31f60cd005f"]),
     "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7febac6cdb5065a746c7dd304cd7f8e945499cb51c"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$payments$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$lib$2f$generate$2d$token$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__('[project]/.next-internal/server/app/dashboard/payments/page/actions.js { ACTIONS_MODULE0 => "[project]/actions/user.action.ts [app-rsc] (ecmascript)", ACTIONS_MODULE1 => "[project]/lib/generate-token.ts [app-rsc] (ecmascript)" } [app-rsc] (ecmascript) <module evaluation>');
