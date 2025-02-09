@@ -120,9 +120,60 @@ class UserController {
 	// [GET] /user/transactions
 	async getTransactions(req, res, next) {
 		try {
-			const userId = '67420187ce7f12bf6ec22428'
-			const transactions = await transactionModel.find({ user: userId })
-			return res.json(transactions)
+			const currentUser = req.user
+			const { searchQuery, filter, page, pageSize } = req.query
+			const skipAmount = (page - 1) * pageSize
+
+			const matchQuery = { user: currentUser._id }
+
+			if (searchQuery) {
+				const escapedSearchQuery = searchQuery.replace(
+					/[.*+?^${}()|[\]\\]/g,
+					'\\$&'
+				)
+				matchQuery.$or = [
+					{ 'product.title': { $regex: new RegExp(escapedSearchQuery, 'i') } },
+				]
+			}
+
+			let sortOptions = { createdAt: -1 }
+			if (filter === 'newest') sortOptions = { createdAt: -1 }
+			else if (filter === 'oldest') sortOptions = { createdAt: 1 }
+
+			const transactions = await transactionModel.aggregate([
+				{
+					$lookup: {
+						from: 'products',
+						localField: 'product',
+						foreignField: '_id',
+						as: 'product',
+					},
+				},
+				{ $unwind: '$product' },
+				{ $match: matchQuery },
+				{ $sort: sortOptions },
+				{ $skip: skipAmount },
+				{ $limit: +pageSize },
+				{
+					$project: {
+						'product.title': 1,
+						amount: 1,
+						state: 1,
+						create_time: 1,
+						perform_time: 1,
+						cancel_time: 1,
+						reason: 1,
+						provider: 1,
+					},
+				},
+			])
+
+			const totalTransactions = await transactionModel.countDocuments(
+				matchQuery
+			)
+			const isNext = totalTransactions > skipAmount + transactions.length
+
+			return res.json({ transactions, isNext })
 		} catch (error) {
 			next(error)
 		}

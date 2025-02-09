@@ -54,6 +54,18 @@ export const getOrders = actionClient
 		return JSON.parse(JSON.stringify(data))
 	})
 
+export const getTransactions = actionClient
+	.schema(searchParamsSchema)
+	.action<ReturnActionType>(async ({ parsedInput }) => {
+		const session = await getServerSession(authOptions)
+		const token = await generateToken(session?.currentUser?._id)
+		const { data } = await axiosClient.get('/api/user/transactions', {
+			headers: { Authorization: `Bearer ${token}` },
+			params: parsedInput,
+		})
+		return JSON.parse(JSON.stringify(data))
+	})
+
 export const addFavorite = actionClient
 	.schema(idSchema)
 	.action<ReturnActionType>(async ({ parsedInput }) => {
