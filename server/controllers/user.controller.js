@@ -64,9 +64,55 @@ class UserController {
 	// [GET] /user/orders
 	async getOrders(req, res, next) {
 		try {
-			const userId = '67420187ce7f12bf6ec22428'
-			const orders = await orderModel.find({ user: userId })
-			return res.json(orders)
+			const currentUser = req.user
+			const { searchQuery, filter, page, pageSize } = req.query
+			const skipAmount = (page - 1) * pageSize
+
+			const matchQuery = { user: currentUser._id }
+
+			if (searchQuery) {
+				const escapedSearchQuery = searchQuery.replace(
+					/[.*+?^${}()|[\]\\]/g,
+					'\\$&'
+				)
+				matchQuery.$or = [
+					{ 'product.title': { $regex: new RegExp(escapedSearchQuery, 'i') } },
+				]
+			}
+
+			let sortOptions = { createdAt: -1 }
+			if (filter === 'newest') sortOptions = { createdAt: -1 }
+			else if (filter === 'oldest') sortOptions = { createdAt: 1 }
+
+			const orders = await orderModel.aggregate([
+				{
+					$lookup: {
+						from: 'products',
+						localField: 'product',
+						foreignField: '_id',
+						as: 'product',
+					},
+				},
+				{ $unwind: '$product' },
+				{ $match: matchQuery },
+				{ $sort: sortOptions },
+				{ $skip: skipAmount },
+				{ $limit: +pageSize },
+				{
+					$project: {
+						'product.title': 1,
+						createdAt: 1,
+						updatedAt: 1,
+						price: 1,
+						status: 1,
+					},
+				},
+			])
+
+			const totalOrders = await orderModel.countDocuments(matchQuery)
+			const isNext = totalOrders > skipAmount + orders.length
+
+			return res.json({ orders, isNext })
 		} catch (error) {
 			next(error)
 		}

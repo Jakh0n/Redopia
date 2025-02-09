@@ -1,9 +1,5 @@
 {
   "app": {
-    "[project]/app/dashboard/(personal-information)/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
     "[project]/app/(root)/(home)/page": [
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
@@ -12,7 +8,7 @@
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ],
-    "[project]/app/dashboard/watch-list/page": [
+    "[project]/app/dashboard/(personal-information)/page": [
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ],
@@ -21,14 +17,6 @@
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ],
     "[project]/app/dashboard/payments/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/dashboard/settings/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/(auth)/sign-up/page": [
       "static/media/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ-s.p.133d2d48.woff2",
       "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
     ]
