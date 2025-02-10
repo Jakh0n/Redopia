@@ -2,8 +2,8 @@
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
-  "/dashboard/(personal-information)/page": "app/dashboard/(personal-information)/page.js",
-  "/dashboard/orders/page": "app/dashboard/orders/page.js",
-  "/dashboard/payments/page": "app/dashboard/payments/page.js",
-  "/dashboard/watch-list/page": "app/dashboard/watch-list/page.js"
+  "/admin/(customers)/page": "app/admin/(customers)/page.js",
+  "/admin/products/page": "app/admin/products/page.js",
+  "/api/uploadthing/route": "app/api/uploadthing/route.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

@@ -73,7 +73,7 @@ export const searchParamsSchema = z.object({
 	filter: z.string().optional(),
 	category: z.string().optional(),
 	page: z.string().default('1'),
-	pageSize: z.string().default('3'),
+	pageSize: z.string().default('6'),
 })
 export const updateUserSchema = z.object({
 	fullName: z.string().optional(),

@@ -2,6 +2,7 @@ const userModel = require('../models/user.model')
 const productModel = require('../models/product.model')
 const orderModel = require('../models/order.model')
 const transactionModel = require('../models/transaction.model')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const AdminController = new (class {
 	constructor() {
 		this.userId = '678f0308be4994c812397c86'
@@ -241,11 +242,34 @@ const AdminController = new (class {
 	// {POST} /admin/create-product
 	async createProduct(req, res, next) {
 		try {
+			const userId = req.user._id
 			const newProduct = await productModel.create(req.body)
-			console.log(req.user)
 
 			if (!newProduct)
 				return res.json({ failure: 'Failed while creating product' })
+			const product = await stripe.products.create({
+				name: newProduct.title,
+				images: [newProduct.image],
+				metadata: {
+					productId: newProduct._id.toString(),
+					userId: userId.toString(),
+				},
+			})
+			const exchangeRate = 12850
+			const amountInUSD = newProduct.price / exchangeRate
+			const price = await stripe.prices.create({
+				product: product.id,
+				unit_amount: amountInUSD.toFixed(0) * 100,
+				currency: 'usd',
+				metadata: {
+					productId: newProduct._id.toString(),
+					userId: userId.toString(),
+				},
+			})
+			await productModel.findByIdAndUpdate(newProduct._id, {
+				stripeProductId: product.id,
+				stripePriceId: price.id,
+			})
 			return res.json({ status: 201 })
 		} catch (error) {
 			console.log(error)
