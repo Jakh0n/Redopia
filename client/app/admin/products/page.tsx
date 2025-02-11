@@ -1,7 +1,6 @@
 import { Separator } from '@/components/ui/separator'
 import AddProduct from '../_components/add-product'
 import ProductCard from '../_components/product.card'
-import { products } from '@/constants'
 import Filter from '@/components/shared/filter'
 import { getProducts } from '@/actions/admin.action'
 import { SearchParams } from '@/types'

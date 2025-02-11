@@ -5,7 +5,7 @@ const transactionModel = require('../models/transaction.model')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const AdminController = new (class {
 	constructor() {
-		this.userId = '678f0308be4994c812397c86'
+		this.userId = '67a8101e1e68fa24954c9000'
 		this.createProduct = this.createProduct.bind(this)
 		this.getProduct = this.getProduct.bind(this)
 		this.updateProduct = this.updateProduct.bind(this)
@@ -239,12 +239,11 @@ const AdminController = new (class {
 		}
 	}
 
-	// {POST} /admin/create-product
+	// [POST] /admin/create-product
 	async createProduct(req, res, next) {
 		try {
-			const userId = req.user._id
+			const userId = req.user ? req.user._id : this.userId
 			const newProduct = await productModel.create(req.body)
-
 			if (!newProduct)
 				return res.json({ failure: 'Failed while creating product' })
 			const product = await stripe.products.create({
@@ -316,6 +315,10 @@ const AdminController = new (class {
 			const deletedProduct = await productModel.findByIdAndDelete(id)
 			if (!deletedProduct)
 				return res.json({ failure: 'Failed while deleting product' })
+			await stripe.products.update(deletedProduct.stripePriceId, {
+				active: false,
+			})
+			await stripe.products.del(deletedProduct.stripeProductId)
 			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)

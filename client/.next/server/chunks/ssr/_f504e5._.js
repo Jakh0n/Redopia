@@ -526,32 +526,32 @@ const Page = async (props)=>{
                         children: "Products"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 30,
+                        lineNumber: 29,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$admin$2f$_components$2f$add$2d$product$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 29,
+                lineNumber: 28,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Separator"], {
                 className: "my-3"
             }, void 0, false, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shared$2f$filter$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 showCategory: true
             }, void 0, false, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 36,
+                lineNumber: 35,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -562,20 +562,20 @@ const Page = async (props)=>{
                         children: "No products found"
                     }, void 0, false, {
                         fileName: "[project]/app/admin/products/page.tsx",
-                        lineNumber: 40,
+                        lineNumber: 39,
                         columnNumber: 6
                     }, this),
                     products && products.map((product)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$admin$2f$_components$2f$product$2e$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                             product: product
                         }, product._id, false, {
                             fileName: "[project]/app/admin/products/page.tsx",
-                            lineNumber: 44,
+                            lineNumber: 43,
                             columnNumber: 7
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 38,
+                lineNumber: 37,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shared$2f$pagination$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -583,7 +583,7 @@ const Page = async (props)=>{
                 pageNumber: searchParams?.page ? +searchParams.page : 1
             }, void 0, false, {
                 fileName: "[project]/app/admin/products/page.tsx",
-                lineNumber: 47,
+                lineNumber: 46,
                 columnNumber: 4
             }, this)
         ]
