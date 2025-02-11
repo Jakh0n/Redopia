@@ -242,8 +242,10 @@ const AdminController = new (class {
 	// [POST] /admin/create-product
 	async createProduct(req, res, next) {
 		try {
-			const userId = req.user ? req.user._id : this.userId
+			const userId = req.user._id
+			console.log(userId)
 			const newProduct = await productModel.create(req.body)
+			console.log(newProduct)
 			if (!newProduct)
 				return res.json({ failure: 'Failed while creating product' })
 			const product = await stripe.products.create({
@@ -251,7 +253,7 @@ const AdminController = new (class {
 				images: [newProduct.image],
 				metadata: {
 					productId: newProduct._id.toString(),
-					userId: userId.toString(),
+					userid: userId.toString(),
 				},
 			})
 			const exchangeRate = 12850
@@ -281,11 +283,27 @@ const AdminController = new (class {
 		try {
 			const data = req.body
 			const { id } = req.params
-			const updateProduct = await productModel.findByIdAndUpdate(id, data)
-			if (!updateProduct)
-				return res.json({ failure: 'Failed while Product Update' })
+			const userId = req.user._id
+			const updatedProduct = await productModel.findByIdAndUpdate(id, data, {
+				new: true,
+			})
+			const exchangeRate = 12850
+			const amountInUSD = updatedProduct.price / exchangeRate
+			const price = await stripe.prices.create({
+				product: updatedProduct.stripeProductId,
+				unit_amount: amountInUSD.toFixed(0) * 100,
+				currency: 'usd',
+				metadata: {
+					productId: updatedProduct._id.toString(),
+					userId: userId.toString(),
+				},
+			})
+			await productModel.findByIdAndUpdate(updatedProduct._id, {
+				stripePriceId: price.id,
+			})
 			return res.json({ status: 200 })
 		} catch (error) {
+			console.log(error)
 			next(error)
 		}
 	}
@@ -312,15 +330,13 @@ const AdminController = new (class {
 	async deleteProduct(req, res, next) {
 		try {
 			const { id } = req.params
-			const deletedProduct = await productModel.findByIdAndDelete(id)
-			if (!deletedProduct)
-				return res.json({ failure: 'Failed while deleting product' })
-			await stripe.products.update(deletedProduct.stripePriceId, {
-				active: false,
-			})
-			await stripe.products.del(deletedProduct.stripeProductId)
+			const product = await productModel.findById(id)
+			await stripe.prices.update(product.stripePriceId, { active: false })
+			await stripe.products.update(product.stripeProductId, { active: false })
+			await productModel.findByIdAndDelete(id)
 			return res.json({ status: 200 })
 		} catch (error) {
+			console.log(error)
 			next(error)
 		}
 	}
