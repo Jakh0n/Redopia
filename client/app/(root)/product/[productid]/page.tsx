@@ -5,7 +5,7 @@ import { getProduct } from '@/actions/user.action'
 import { Params } from '@/types'
 import { FC } from 'react'
 import { notFound } from 'next/navigation'
-import CreateOrderButton from '../_components/crete-order.btn'
+import CreateOrderButton from '../_components/create-order.btn'
 
 interface Props {
 	params: Params
