@@ -44,7 +44,7 @@ const ProductCard: FC<Props> = ({ product }) => {
 				<Image
 					src={product.image!}
 					fill
-					className='mx-auto'
+					className='mx-auto object-cover'
 					alt={product.title!}
 				/>
 				<div className='absolute right-0 top-0 z-50 opacity-0 group-hover:opacity-100 transition-all'>

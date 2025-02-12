@@ -55,7 +55,10 @@ __turbopack_esm__({
     "cn": (()=>cn),
     "formUrlQuery": (()=>formUrlQuery),
     "formatPrice": (()=>formatPrice),
-    "removeUrlQuery": (()=>removeUrlQuery)
+    "getStatusText": (()=>getStatusText),
+    "getStatusVariant": (()=>getStatusVariant),
+    "removeUrlQuery": (()=>removeUrlQuery),
+    "sliceText": (()=>sliceText)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/clsx/dist/clsx.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-rsc] (ecmascript)");
@@ -92,6 +95,40 @@ function removeUrlQuery({ key, params }) {
         skipNull: true
     });
 }
+const getStatusText = (status)=>{
+    switch(status){
+        case TransactionState.Pending:
+            return 'Pending';
+        case TransactionState.Paid:
+            return 'Paid';
+        case TransactionState.PaidCanceled:
+            return 'Cancelled';
+        case TransactionState.PendingCanceled:
+            return 'Cancelled';
+        default:
+            return 'Unknown';
+    }
+};
+const getStatusVariant = (status)=>{
+    switch(status){
+        case TransactionState.Pending:
+            return 'outline';
+        case TransactionState.Paid:
+            return 'default';
+        case TransactionState.PaidCanceled:
+            return 'destructive';
+        case TransactionState.PendingCanceled:
+            return 'destructive';
+        default:
+            return 'secondary';
+    }
+};
+const sliceText = (text, length)=>{
+    if (text.length > length) {
+        return text.slice(0, length) + '...';
+    }
+    return text;
+};
 }}),
 "[project]/components/ui/button.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

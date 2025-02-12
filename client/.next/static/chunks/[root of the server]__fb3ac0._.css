@@ -642,6 +642,10 @@ body {
   height: 200px;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .h-\[70vh\] {
   height: 70vh;
 }
@@ -656,14 +660,6 @@ body {
 
 .h-px {
   height: 1px;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
-.h-\[400px\] {
-  height: 400px;
 }
 
 .max-h-96 {
@@ -748,6 +744,14 @@ body {
 
 .w-px {
   width: 1px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[140px\] {
+  width: 140px;
 }
 
 .min-w-\[8rem\] {

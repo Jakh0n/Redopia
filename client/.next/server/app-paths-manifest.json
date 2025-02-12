@@ -1,13 +1,17 @@
 {
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/(root)/product/[productId]/page": "app/(root)/product/[productId]/page.js",
+  "/(root)/success/page": "app/(root)/success/page.js",
   "/dashboard/(personal-information)/page": "app/dashboard/(personal-information)/page.js",
+  "/dashboard/orders/page": "app/dashboard/orders/page.js",
+  "/dashboard/payments/page": "app/dashboard/payments/page.js",
+  "/dashboard/watch-list/page": "app/dashboard/watch-list/page.js",
   "/admin/(customers)/page": "app/admin/(customers)/page.js",
   "/admin/products/page": "app/admin/products/page.js",
   "/api/uploadthing/route": "app/api/uploadthing/route.js",
-  "/dashboard/watch-list/page": "app/dashboard/watch-list/page.js",
-  "/(root)/product/[productId]/page": "app/(root)/product/[productId]/page.js",
-  "/(root)/success/page": "app/(root)/success/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js"
+  "/admin/orders/page": "app/admin/orders/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js",
+  "/admin/payments/page": "app/admin/payments/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

@@ -159,6 +159,7 @@ class UserController {
 				{
 					$project: {
 						'product.title': 1,
+						'product.image': 1,
 						amount: 1,
 						state: 1,
 						create_time: 1,
@@ -277,6 +278,12 @@ class UserController {
 				line_items: [{ price: product.stripePriceId, quantity: 1 }],
 				success_url: `${process.env.CLIENT_URL}/success?productId=${product._id}&userId=${currentUser._id}`,
 				cancel_url: `${process.env.CLIENT_URL}/cancel?productId=${product._id}&userId=${currentUser._id}`,
+				payment_intent_data: {
+					metadata: {
+						productId: product._id.toString(),
+						userId: currentUser._id.toString(),
+					},
+				},
 			})
 
 			return res.json({ status: 200, checkoutUrl: session.url })
