@@ -658,6 +658,14 @@ body {
   height: 1px;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }

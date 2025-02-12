@@ -144,12 +144,10 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-;
 const CreateOrderButton = ()=>{
     _s();
     const { isLoading, onError, setIsLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])();
     const { productId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const onStripe = async ()=>{
         setIsLoading(true);
         const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["stripeCheckout"])({
@@ -162,7 +160,6 @@ const CreateOrderButton = ()=>{
             return onError(res.data.failure);
         }
         if (res.data.status === 200) {
-            router.push('/user/orders');
             console.log(res.data.checkoutUrl);
             window.open(res.data.checkoutUrl, '_self');
         }
@@ -177,12 +174,12 @@ const CreateOrderButton = ()=>{
                     children: "Purchase"
                 }, void 0, false, {
                     fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                    lineNumber: 38,
+                    lineNumber: 35,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                lineNumber: 37,
+                lineNumber: 34,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -203,12 +200,12 @@ const CreateOrderButton = ()=>{
                                 className: "cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                                lineNumber: 45,
+                                lineNumber: 42,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                            lineNumber: 44,
+                            lineNumber: 41,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -222,12 +219,12 @@ const CreateOrderButton = ()=>{
                                 className: "cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                                lineNumber: 54,
+                                lineNumber: 51,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                            lineNumber: 53,
+                            lineNumber: 50,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -241,12 +238,12 @@ const CreateOrderButton = ()=>{
                                 className: "cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                                lineNumber: 63,
+                                lineNumber: 60,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                            lineNumber: 62,
+                            lineNumber: 59,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -260,36 +257,35 @@ const CreateOrderButton = ()=>{
                                 className: "cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                                lineNumber: 72,
+                                lineNumber: 69,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                            lineNumber: 71,
+                            lineNumber: 68,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                    lineNumber: 43,
+                    lineNumber: 40,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-                lineNumber: 42,
+                lineNumber: 39,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(root)/product/_components/create-order.btn.tsx",
-        lineNumber: 36,
+        lineNumber: 33,
         columnNumber: 3
     }, this);
 };
-_s(CreateOrderButton, "pTtsRX/aXo8qKte76HipFIFUch0=", false, function() {
+_s(CreateOrderButton, "QX76Lr8G00NVlyiWUU0JNEO3QJE=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"]
     ];
 });
 _c = CreateOrderButton;

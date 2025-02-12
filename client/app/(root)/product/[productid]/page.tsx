@@ -3,7 +3,6 @@ import { formatPrice } from '@/lib/utils'
 import Image from 'next/image'
 import { getProduct } from '@/actions/user.action'
 import { Params } from '@/types'
-import { FC } from 'react'
 import { notFound } from 'next/navigation'
 import CreateOrderButton from '../_components/create-order.btn'
 

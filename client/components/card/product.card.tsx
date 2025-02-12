@@ -40,11 +40,10 @@ const ProductCard: FC<Props> = ({ product }) => {
 			onClick={() => router.push(`/product/${product._id}`)}
 			className='cursor-pointer'
 		>
-			<div className='bg-secondary relative group'>
+			<div className='bg-secondary relative group h-[300px]'>
 				<Image
 					src={product.image!}
-					width={300}
-					height={300}
+					fill
 					className='mx-auto'
 					alt={product.title!}
 				/>
