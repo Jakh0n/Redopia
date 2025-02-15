@@ -1,6 +1,10 @@
 const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 const otpModel = require('../models/otp.model')
+const otpTemplate = require('../template/otp.template')
+const succesTemplate = require('../template/succes.template')
+const cancelTemplate = require('../template/cancel.template')
+const updateTemplate = require('../template/update.template')
 
 class MailService {
 	constructor() {
@@ -30,11 +34,34 @@ class MailService {
 			from: process.env.SMTP_USER,
 			to: email,
 			subject: `OTP for verification ${new Date().toLocaleString()}`,
-			html: `
-				<h1>Your OTP is ${otp}</h1>
-				<p>OTP will expire in 5 minutes</p>
-				<p><strong>Note:</strong> Do not share this OTP with anyone for security reasons.</p>
-			`,
+			html: otpTemplate(otp),
+		})
+	}
+
+	async sendSuccessMail({ user, product }) {
+		await this.transporter.sendMail({
+			from: process.env.SMTP_USER,
+			to: user.email,
+			subject: `Order Confirmation ${new Date().toLocaleString()}`,
+			html: succesTemplate({ user, product }),
+		})
+	}
+
+	async sendCancelMail({ user, product }) {
+		await this.transporter.sendMail({
+			from: process.env.SMTP_USER,
+			to: user.email,
+			subject: `Order Cancelled ${new Date().toLocaleString()}`,
+			html: cancelTemplate({ user, product }),
+		})
+	}
+
+	async sendUpdateMail({ user, product, status }) {
+		await this.transporter.sendMail({
+			from: process.env.SMTP_USER,
+			to: user.email,
+			subject: `Order Update ${new Date().toLocaleString()}`,
+			html: updateTemplate({ user, product, status }),
 		})
 	}
 

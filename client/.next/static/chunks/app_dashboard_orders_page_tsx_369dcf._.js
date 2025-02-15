@@ -6,7 +6,7 @@
   "path": "static/chunks/app_dashboard_orders_page_tsx_369dcf._.js",
   "chunks": [
     "static/chunks/node_modules_d25fa5._.js",
-    "static/chunks/_6a6e6b._.js"
+    "static/chunks/_9395de._.js"
   ],
   "source": "dynamic"
 });

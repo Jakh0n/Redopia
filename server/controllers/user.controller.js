@@ -289,7 +289,6 @@ class UserController {
 			return res.json({ status: 200, checkoutUrl: session.url })
 		} catch (error) {
 			console.log(error)
-
 			next(error)
 		}
 	}

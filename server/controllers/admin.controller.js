@@ -2,6 +2,7 @@ const userModel = require('../models/user.model')
 const productModel = require('../models/product.model')
 const orderModel = require('../models/order.model')
 const transactionModel = require('../models/transaction.model')
+const mailService = require('../services/mail.service')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const AdminController = new (class {
 	constructor() {
@@ -312,15 +313,13 @@ const AdminController = new (class {
 		try {
 			const { status } = req.body
 			const { id } = req.params
-			const userId = this.userId
-			const user = await userModel.findById(userId)
-			if (!user) return res.json({ failure: 'User not found' })
-			if (user.role !== 'admin')
-				return res.json({ failure: 'User is not admin' })
+			const user = await userModel.findById(req.user._id)
 			const updatedOrder = await orderModel.findByIdAndUpdate(id, { status })
+			const product = await productModel.findById(updatedOrder.product)
 			if (!updatedOrder)
 				return res.json({ failure: 'Failed while updating order' })
-			return res.json({ success: 'Order updated successfully' })
+			await mailService.updateTemplate({ user, product, status })
+			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)
 		}

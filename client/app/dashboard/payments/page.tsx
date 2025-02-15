@@ -45,6 +45,7 @@ const Page: FC<Props> = async props => {
 				)}
 				<TableHeader>
 					<TableRow>
+						<TableHead> Image</TableHead>
 						<TableHead>Product</TableHead>
 						<TableHead>Provider</TableHead>
 						<TableHead>Status</TableHead>

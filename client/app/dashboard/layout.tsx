@@ -1,8 +1,15 @@
 import React from 'react'
 import Sidebar from './_components/sidebar'
 import Navbar from '@/components/shared/navbar'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/lib/auth-options'
+import { redirect } from 'next/navigation'
 
-function Layout({ children }: { children: React.ReactNode }) {
+async function Layout({ children }: { children: React.ReactNode }) {
+	const session = await getServerSession(authOptions)
+
+	if (!session) redirect('/sign-in')
+
 	return (
 		<div>
 			<Navbar />

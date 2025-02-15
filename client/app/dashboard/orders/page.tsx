@@ -16,6 +16,7 @@ import { formatPrice } from '@/lib/utils'
 import { SearchParams } from '@/types'
 import React, { FC } from 'react'
 import { format } from 'date-fns'
+import Pagination from '@/components/shared/pagination'
 
 interface Props {
 	searchParams: SearchParams
@@ -41,12 +42,14 @@ const Page: FC<Props> = async props => {
 			<Separator className='my-3' />
 
 			<Table className='text-sm'>
-				<TableCaption>A list of your recent orders.</TableCaption>
+				{orders && orders.length > 0 && (
+					<TableCaption>A list of your recent orders.</TableCaption>
+				)}
 				<TableHeader>
 					<TableRow>
-						<TableHead>Price</TableHead>
-						<TableHead>Status</TableHead>
 						<TableHead>Product</TableHead>
+						<TableHead>Status</TableHead>
+						<TableHead>Price</TableHead>
 						<TableHead>Order time</TableHead>
 						<TableHead className='text-right'>Updated time</TableHead>
 					</TableRow>
@@ -77,6 +80,11 @@ const Page: FC<Props> = async props => {
 						))}
 				</TableBody>
 			</Table>
+
+			<Pagination
+				isNext={isNext}
+				pageNumber={searchParams?.page ? +searchParams.page : 1}
+			/>
 		</>
 	)
 }

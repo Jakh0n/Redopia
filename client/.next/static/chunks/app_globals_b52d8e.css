@@ -730,6 +730,10 @@ body {
   width: 2.25rem;
 }
 
+.w-\[140px\] {
+  width: 140px;
+}
+
 .w-\[1px\] {
   width: 1px;
 }
@@ -744,14 +748,6 @@ body {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[140px\] {
-  width: 140px;
 }
 
 .min-w-\[8rem\] {
