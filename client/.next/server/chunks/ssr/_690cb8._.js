@@ -99,6 +99,7 @@ __turbopack_esm__({
     "registerSchema": (()=>registerSchema),
     "searchParamsSchema": (()=>searchParamsSchema),
     "updateProductSchema": (()=>updateProductSchema),
+    "updateStatusSchema": (()=>updateStatusSchema),
     "updateUserSchema": (()=>updateUserSchema),
     "verifyOtpSchema": (()=>verifyOtpSchema)
 });
@@ -191,6 +192,9 @@ const updateUserSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
     isDeleted: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].boolean().optional(),
     deletedAt: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].date().optional()
 });
+const updateStatusSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].object({
+    status: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string()
+}).merge(idSchema);
 }}),
 "[project]/actions/user.action.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -423,7 +427,8 @@ __turbopack_export_namespace__(__TURBOPACK__imported__module__$5b$project$5d2f$a
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>__TURBOPACK__default__export__)
+    "default": (()=>__TURBOPACK__default__export__),
+    "generateMetaData": (()=>generateMetaData)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/badge.tsx [app-rsc] (ecmascript)");
@@ -440,6 +445,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
+async function generateMetaData({ params }) {
+    const { productId } = await params;
+    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProduct"])({
+        id: productId
+    });
+    const product = res?.data?.product;
+    console.log(product);
+    return {
+        title: product?.title,
+        description: product?.description,
+        openGraph: {
+            images: product?.image
+        }
+    };
+}
 const Page = async ({ params })=>{
     const { productId } = await params;
     const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$actions$2f$user$2e$action$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getProduct"])({
@@ -459,12 +479,12 @@ const Page = async ({ params })=>{
                     alt: product.title
                 }, void 0, false, {
                     fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                    lineNumber: 24,
+                    lineNumber: 35,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                lineNumber: 23,
+                lineNumber: 34,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -475,7 +495,7 @@ const Page = async ({ params })=>{
                         children: product.title
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 32,
+                        lineNumber: 43,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -487,7 +507,7 @@ const Page = async ({ params })=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 33,
+                        lineNumber: 44,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -495,7 +515,7 @@ const Page = async ({ params })=>{
                         children: product.description
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 36,
+                        lineNumber: 47,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -503,12 +523,12 @@ const Page = async ({ params })=>{
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatPrice"])(+product.price)
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 37,
+                        lineNumber: 48,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$root$292f$product$2f$_components$2f$create$2d$order$2e$btn$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 38,
+                        lineNumber: 49,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -516,19 +536,19 @@ const Page = async ({ params })=>{
                         children: "Your purchase is secure with us. We do not store any credit card information. We use Payme for payment processing."
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                        lineNumber: 39,
+                        lineNumber: 50,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-                lineNumber: 31,
+                lineNumber: 42,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(root)/product/[productId]/page.tsx",
-        lineNumber: 22,
+        lineNumber: 33,
         columnNumber: 3
     }, this);
 };

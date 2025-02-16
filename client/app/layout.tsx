@@ -12,12 +12,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-	title: 'eCommerce',
-	description:
-		'Experience a modern eCommerce platform designed for seamless online shopping. Featuring user-friendly navigation, secure payment options, and an extensive range of products, our platform caters to diverse customer needs. ',
-	icons: {
-		icon: '/favicon.svg',
-	},
+	title: 'Seleor e-commerce',
+	description: 'Seleor e-commerce website built with Next.js',
+	icons: { icon: '/favicon.png' },
 }
 
 export default function RootLayout({ children }: ChildProps) {
