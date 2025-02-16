@@ -77,7 +77,7 @@ const Page: FC<Props> = async props => {
 									{format(new Date(order.createdAt), 'dd/MM/yyyy')}
 								</TableCell>
 								<TableCell className='text-right'>
-									<OrderActions />
+									<OrderActions order={order} />
 								</TableCell>
 							</TableRow>
 						))}

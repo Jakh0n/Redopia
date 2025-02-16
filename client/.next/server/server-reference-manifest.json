@@ -1,289 +1,293 @@
 {
   "node": {
-    "7fc45dc492d9209e4de1800722605be31f60cd005f": {
+    "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7f35f1558d5754e23ba421a432256fb5af9294d3e2": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7f63718cafa004d68a0b180e6478b68ff5657594c2": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
+        "app/dashboard/orders/page": "rsc"
       }
     },
     "7f18ffa0f5768cdd8fbd5268abb0c6a38d5bcac601": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
+        "app/dashboard/orders/page": "rsc"
       }
     },
-    "7f6b15dcd9abc968b4f60338fc1493a6811456104f": {
+    "7f35f1558d5754e23ba421a432256fb5af9294d3e2": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7f7c9a35e928352920c68e2834be9e721948b93d8d": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": {
-      "workers": {
-        "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(root)/(home)/page": "rsc",
-        "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
+        "app/dashboard/orders/page": "rsc"
       }
     },
     "7f00a6bdcb0fe1fc8c8a9e4c21f90ca92a3b1b7ed0": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7f6b15dcd9abc968b4f60338fc1493a6811456104f": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7f63718cafa004d68a0b180e6478b68ff5657594c2": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7f7c9a35e928352920c68e2834be9e721948b93d8d": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7fc45dc492d9209e4de1800722605be31f60cd005f": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
+      }
+    },
+    "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": {
+      "workers": {
+        "app/(root)/(home)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser",
+        "app/dashboard/orders/page": "rsc"
       }
     },
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/admin/products/page": {
           "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
@@ -291,184 +295,36 @@
         "app/(root)/(home)/page": "rsc",
         "app/admin/(customers)/page": "rsc",
         "app/admin/products/page": "rsc",
+        "app/(root)/product/[productId]/page": "rsc",
         "app/dashboard/(personal-information)/page": "rsc",
         "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "rsc"
+        "app/admin/orders/page": "rsc"
       }
     },
-    "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6": {
+    "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": {
       "workers": {
         "app/(root)/(home)/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/orders/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/(root)/product/[productId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser",
-        "app/dashboard/orders/page": "rsc",
-        "app/(root)/product/[productId]/page": "action-browser"
-      }
-    },
-    "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f0c04b9bb8280c4b1004058763525f894556cddc1": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7fadc1f5772ff42d4b55369fcc48996f4f9d31ee32": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7fd51a773f6a1f097e0c5e817f270288cbd76e26f2": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f3139562d48825a6503a9aa843bca222f8945b3e5": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea": {
-      "workers": {
-        "app/admin/(customers)/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/admin/products/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/admin/(customers)/page": "rsc",
-        "app/admin/products/page": "rsc"
-      }
-    },
-    "7f060160d6fdec08100de12e4e070e2d45fed05e4d": {
-      "workers": {
-        "app/(auth)/sign-in/page": {
-          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-in/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/(auth)/sign-up/page": {
-          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/(auth)/sign-in/page": "action-browser",
-        "app/(auth)/sign-up/page": "action-browser",
-        "app/dashboard/(personal-information)/page": "action-browser"
+        "app/dashboard/orders/page": "rsc"
       }
     },
     "7f1177758187559a97f0b3e572320ee1f872a136e3": {
@@ -477,18 +333,29 @@
           "moduleId": "[project]/.next-internal/server/app/(auth)/sign-in/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/(auth)/sign-up/page": {
-          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
         "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(auth)/sign-in/page": "action-browser",
-        "app/(auth)/sign-up/page": "action-browser",
+        "app/dashboard/(personal-information)/page": "action-browser"
+      }
+    },
+    "7f060160d6fdec08100de12e4e070e2d45fed05e4d": {
+      "workers": {
+        "app/(auth)/sign-in/page": {
+          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-in/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/(personal-information)/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser"
       }
     },
@@ -498,18 +365,13 @@
           "moduleId": "[project]/.next-internal/server/app/(auth)/sign-in/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/(auth)/sign-up/page": {
-          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
         "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(auth)/sign-in/page": "action-browser",
-        "app/(auth)/sign-up/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser"
       }
     },
@@ -519,19 +381,198 @@
           "moduleId": "[project]/.next-internal/server/app/(auth)/sign-in/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/(auth)/sign-up/page": {
-          "moduleId": "[project]/.next-internal/server/app/(auth)/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
         "app/dashboard/(personal-information)/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/dashboard/(personal-information)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/auth-action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
         "app/(auth)/sign-in/page": "action-browser",
-        "app/(auth)/sign-up/page": "action-browser",
         "app/dashboard/(personal-information)/page": "action-browser"
+      }
+    },
+    "7fd51a773f6a1f097e0c5e817f270288cbd76e26f2": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7fe2f720e3321612d27af369e350a4c37ca62d1bb2": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f3139562d48825a6503a9aa843bca222f8945b3e5": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f0c04b9bb8280c4b1004058763525f894556cddc1": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7fadc1f5772ff42d4b55369fcc48996f4f9d31ee32": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/products/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/products/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/admin/orders/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/orders/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc",
+        "app/admin/products/page": "rsc",
+        "app/admin/orders/page": "rsc"
       }
     }
   },

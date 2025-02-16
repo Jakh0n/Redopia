@@ -313,12 +313,12 @@ const AdminController = new (class {
 		try {
 			const { status } = req.body
 			const { id } = req.params
-			const user = await userModel.findById(req.user._id)
 			const updatedOrder = await orderModel.findByIdAndUpdate(id, { status })
 			const product = await productModel.findById(updatedOrder.product)
+			const user = await userModel.findById(updatedOrder.user)
 			if (!updatedOrder)
 				return res.json({ failure: 'Failed while updating order' })
-			await mailService.updateTemplate({ user, product, status })
+			await mailService.sendUpdateMail({ user, product, status })
 			return res.json({ status: 200 })
 		} catch (error) {
 			next(error)
