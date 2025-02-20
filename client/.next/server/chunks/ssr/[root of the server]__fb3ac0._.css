@@ -459,6 +459,10 @@ body {
   z-index: 100;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -505,6 +509,14 @@ body {
   margin-bottom: .125rem;
 }
 
+.mb-3\.5 {
+  margin-bottom: .875rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -531,14 +543,6 @@ body {
 
 .mt-44 {
   margin-top: 11rem;
-}
-
-.mb-3\.5 {
-  margin-bottom: .875rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .line-clamp-1 {
@@ -658,6 +662,10 @@ body {
   height: 70vh;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
 .h-\[var\(--radix-select-trigger-height\)\] {
   height: var(--radix-select-trigger-height);
 }
@@ -670,8 +678,8 @@ body {
   height: 1px;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
+.h-\[250px\] {
+  height: 250px;
 }
 
 .max-h-96 {
@@ -1070,6 +1078,11 @@ body {
   background-color: hsl(var(--foreground));
 }
 
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
+}
+
 .bg-muted {
   background-color: hsl(var(--muted));
 }
@@ -1101,11 +1114,6 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
 }
 
 .fill-current {
@@ -1383,6 +1391,11 @@ body {
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
 }
@@ -1411,11 +1424,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
 .underline-offset-4 {
@@ -2181,12 +2189,26 @@ body {
 }
 
 @media not all and (width >= 768px) {
+  .max-md\:hidden {
+    display: none;
+  }
+
   .max-md\:w-1\/2 {
     width: 50%;
   }
 
   .max-md\:w-full {
     width: 100%;
+  }
+
+  .max-md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media not all and (width >= 640px) {
+  .max-sm\:hidden {
+    display: none;
   }
 }
 
@@ -2272,6 +2294,10 @@ body {
 @media (width >= 1024px) {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

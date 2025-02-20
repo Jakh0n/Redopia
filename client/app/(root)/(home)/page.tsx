@@ -24,14 +24,16 @@ const Page = async ({ searchParams }: Props) => {
 	const isNext = res?.data?.isNext || false
 	return (
 		<>
-			<div className='flex items-center justify-between'>
+			<div className='flex items-center justify-between '>
 				<h1 className='font-bold'>Products</h1>
-				<Filter />
+				<div className='max-sm:hidden '>
+					<Filter />
+				</div>
 			</div>
 
 			<Separator className='my-4' />
 
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 				{products &&
 					products.map(product => (
 						<ProductCard key={product._id} product={product} />

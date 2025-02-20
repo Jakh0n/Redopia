@@ -52,7 +52,7 @@ const SignInPage = () => {
 	}
 
 	return (
-		<Card className='w-1/2 p-4'>
+		<Card className='w-1/2 p-4 max-md:w-full'>
 			<h1 className='text-xl font-bold'>Sign In</h1>
 			<p className='text-sm text-muted-foreground'>
 				Welcome back! Please sign in to your account.

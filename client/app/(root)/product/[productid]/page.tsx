@@ -5,6 +5,7 @@ import { getProduct } from '@/actions/user.action'
 import { Params } from '@/types'
 import { notFound } from 'next/navigation'
 import CreateOrderButton from '../_components/create-order.btn'
+import { Button } from '@/components/ui/button'
 
 interface Props {
 	params: Params

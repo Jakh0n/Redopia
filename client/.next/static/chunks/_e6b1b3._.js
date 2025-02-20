@@ -320,7 +320,7 @@ const Filter = ({ showCategory })=>{
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('gap-1 max-md:w-full grid', showCategory ? 'grid-cols-3' : 'grid-cols-2'),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center bg-secondary max-md:w-1/2 border",
+                className: "flex items-center bg-secondary max-md:w-1/2 border rounded-md",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                         placeholder: "Qidirish",
@@ -332,7 +332,7 @@ const Filter = ({ showCategory })=>{
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                        className: "mr-2 cursor-pointer text-muted-foreground"
+                        className: "mr-2 cursor-pointer text-muted-foreground "
                     }, void 0, false, {
                         fileName: "[project]/components/shared/filter.tsx",
                         lineNumber: 76,
@@ -365,6 +365,7 @@ const Filter = ({ showCategory })=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                className: "cursor-pointer",
                                 value: "newest",
                                 children: "Newest"
                             }, void 0, false, {
@@ -373,11 +374,12 @@ const Filter = ({ showCategory })=>{
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                className: "cursor-pointer",
                                 value: "oldest",
                                 children: "Oldest"
                             }, void 0, false, {
                                 fileName: "[project]/components/shared/filter.tsx",
-                                lineNumber: 88,
+                                lineNumber: 90,
                                 columnNumber: 6
                             }, this)
                         ]
@@ -402,12 +404,12 @@ const Filter = ({ showCategory })=>{
                             className: "text-muted-foreground"
                         }, void 0, false, {
                             fileName: "[project]/components/shared/filter.tsx",
-                            lineNumber: 94,
+                            lineNumber: 98,
                             columnNumber: 7
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/shared/filter.tsx",
-                        lineNumber: 93,
+                        lineNumber: 97,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -416,18 +418,18 @@ const Filter = ({ showCategory })=>{
                                 children: category
                             }, category, false, {
                                 fileName: "[project]/components/shared/filter.tsx",
-                                lineNumber: 101,
+                                lineNumber: 105,
                                 columnNumber: 8
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/shared/filter.tsx",
-                        lineNumber: 99,
+                        lineNumber: 103,
                         columnNumber: 6
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/shared/filter.tsx",
-                lineNumber: 92,
+                lineNumber: 96,
                 columnNumber: 5
             }, this)
         ]

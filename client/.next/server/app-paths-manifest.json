@@ -1,9 +1,5 @@
 {
   "/(root)/(home)/page": "app/(root)/(home)/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/(root)/product/[productId]/page": "app/(root)/product/[productId]/page.js",
-  "/(root)/success/page": "app/(root)/success/page.js",
-  "/dashboard/(personal-information)/page": "app/dashboard/(personal-information)/page.js",
-  "/dashboard/orders/page": "app/dashboard/orders/page.js"
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js"
 }

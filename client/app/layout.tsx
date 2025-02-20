@@ -12,9 +12,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-	title: 'Seleor e-commerce',
-	description: 'Seleor e-commerce website built with Next.js',
-	icons: { icon: '/favicon.png' },
+	title: 'Readopia',
+	description: 'Readopia is a platform for reading books',
+	icons: { icon: '/favicon.svg' },
 }
 
 export default function RootLayout({ children }: ChildProps) {

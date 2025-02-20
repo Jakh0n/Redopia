@@ -40,14 +40,14 @@ const ProductCard: FC<Props> = ({ product }) => {
 			onClick={() => router.push(`/product/${product._id}`)}
 			className='cursor-pointer'
 		>
-			<div className='bg-secondary relative group h-[300px]'>
+			<div className='bg-secondary relative group h-[250px]'>
 				<Image
 					src={product.image!}
 					fill
 					className='mx-auto object-cover'
 					alt={product.title!}
 				/>
-				<div className='absolute right-0 top-0 z-50 opacity-0 group-hover:opacity-100 transition-all'>
+				<div className='absolute right-0 top-0 z-40 opacity-0 group-hover:opacity-100 transition-all'>
 					<Button size={'icon'} disabled={isLoading} onClick={onFavourite}>
 						<Heart />
 					</Button>

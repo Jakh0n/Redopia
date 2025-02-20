@@ -101,7 +101,7 @@ const SignUpPage = () => {
 	}
 
 	return (
-		<Card className='w-1/2 p-4'>
+		<Card className='w-1/2 p-4 max-md:w-full'>
 			<h1 className='text-xl font-bold'>Sign Up</h1>
 			<p className='text-sm text-muted-foreground'>
 				Welcome to our platform! Please sign up to create an

@@ -126,10 +126,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$toaster$
 ;
 ;
 const metadata = {
-    title: 'Seleor e-commerce',
-    description: 'Seleor e-commerce website built with Next.js',
+    title: 'Readopia',
+    description: 'Readopia is a platform for reading books',
     icons: {
-        icon: '/favicon.png'
+        icon: '/favicon.svg'
     }
 };
 function RootLayout({ children }) {

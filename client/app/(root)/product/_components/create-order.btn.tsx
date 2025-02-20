@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/popover'
 import UseAction from '@/hooks/use-action'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import React from 'react'
 
@@ -38,7 +39,7 @@ const CreateOrderButton = () => {
 			</PopoverTrigger>
 			<PopoverContent className='p-1 w-56' side='right'>
 				<div className='flex flex-col space-y-1'>
-					<Button variant={'secondary'} onClick={onStripe} disabled={isLoading}>
+					{/* <Button variant={'secondary'} onClick={onStripe} disabled={isLoading}>
 						<Image
 							src={'/stripe.svg'}
 							alt='stripe'
@@ -73,6 +74,9 @@ const CreateOrderButton = () => {
 							height={50}
 							className='cursor-pointer'
 						/>
+					</Button> */}
+					<Button variant={'destructive'} disabled={isLoading}>
+						<Link href={'/client/app/(root)'}>Bank Transfer</Link>
 					</Button>
 				</div>
 			</PopoverContent>

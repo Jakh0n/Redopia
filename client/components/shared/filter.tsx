@@ -63,31 +63,37 @@ const Filter = ({ showCategory }: Props) => {
 	return (
 		<div
 			className={cn(
-				'gap-1 max-md:w-full grid',
+				'gap-1 max-md:w-full grid max-md:grid-cols-2 md:grid-cols-2 ',
 				showCategory ? 'grid-cols-3' : 'grid-cols-2'
 			)}
 		>
-			<div className='flex items-center bg-secondary max-md:w-1/2 border'>
+			<div className='flex items-center bg-secondary max-md:w-1/2 border rounded-md'>
 				<Input
 					placeholder='Qidirish'
 					className='text-xs border-none no-focus'
 					onChange={handleSearchDebounce}
 				/>
-				<Search className='mr-2 cursor-pointer text-muted-foreground' />
+				<Search className='mr-2 cursor-pointer text-muted-foreground ' />
+			</div>
+			<div>
+				<Select onValueChange={onFilterChange}>
+					<SelectTrigger className='bg-secondary text-xs max-md:w-1/2'>
+						<SelectValue
+							placeholder='Select filter'
+							className='text-muted-foreground'
+						/>
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem className='cursor-pointer' value='newest'>
+							Newest
+						</SelectItem>
+						<SelectItem className='cursor-pointer' value='oldest'>
+							Oldest
+						</SelectItem>
+					</SelectContent>
+				</Select>
 			</div>
 
-			<Select onValueChange={onFilterChange}>
-				<SelectTrigger className='bg-secondary text-xs max-md:w-1/2'>
-					<SelectValue
-						placeholder='Select filter'
-						className='text-muted-foreground'
-					/>
-				</SelectTrigger>
-				<SelectContent>
-					<SelectItem value='newest'>Newest</SelectItem>
-					<SelectItem value='oldest'>Oldest</SelectItem>
-				</SelectContent>
-			</Select>
 			{showCategory && (
 				<Select onValueChange={onCategoryChange}>
 					<SelectTrigger className='bg-secondary text-xs max-md:w-1/2'>
