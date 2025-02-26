@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/jakhon/Desktop/eCommerce/client/components/providers/session.provider.tsx"],"sourcesContent":["'use client'\nimport { ChildProps } from '@/types'\nimport React from 'react'\nimport { SessionProvider as Session } from 'next-auth/react'\n\nfunction SessionProvider({ children }: ChildProps) {\n\treturn <Session>{children}</Session>\n}\n\nexport default SessionProvider\n"],"names":[],"mappings":";;;;AAGA;AAHA;;;AAKA,SAAS,gBAAgB,EAAE,QAAQ,EAAc;IAChD,qBAAO,6LAAC,iJAAA,CAAA,kBAAO;kBAAE;;;;;;AAClB;KAFS;uCAIM"}},
-    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

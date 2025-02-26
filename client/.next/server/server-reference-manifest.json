@@ -5,10 +5,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7faac2d7ea9edece0f5bb239939ddc3f89fd13bd9b": {
@@ -16,10 +21,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f6b15dcd9abc968b4f60338fc1493a6811456104f": {
@@ -27,10 +37,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7fc45dc492d9209e4de1800722605be31f60cd005f": {
@@ -38,10 +53,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": {
@@ -49,10 +69,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "rsc"
+        "app/(root)/(home)/page": "rsc",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f0ecdfc9d273b88ee25effb28b3779d31ab4e47d6": {
@@ -60,10 +85,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f68ee945eb42e5eda68810a0dddf54c98174dcacb": {
@@ -71,10 +101,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f7c9a35e928352920c68e2834be9e721948b93d8d": {
@@ -82,10 +117,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f35f1558d5754e23ba421a432256fb5af9294d3e2": {
@@ -93,10 +133,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f63718cafa004d68a0b180e6478b68ff5657594c2": {
@@ -104,10 +149,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7febac6cdb5065a746c7dd304cd7f8e945499cb51c": {
@@ -115,10 +165,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f18ffa0f5768cdd8fbd5268abb0c6a38d5bcac601": {
@@ -126,10 +181,15 @@
         "app/(root)/(home)/page": {
           "moduleId": "[project]/.next-internal/server/app/(root)/(home)/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/(root)/product/[productId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/product/[productId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/user.action.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/(root)/(home)/page": "action-browser"
+        "app/(root)/(home)/page": "action-browser",
+        "app/(root)/product/[productId]/page": "rsc"
       }
     },
     "7f1177758187559a97f0b3e572320ee1f872a136e3": {
