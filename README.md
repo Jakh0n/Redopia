@@ -14,7 +14,7 @@ https://www.flami.org/
 ## 📸 Screenshots  
 ![Homepage Screenshot](./screenshots/homepage.png)  
 ![Admin Dashboard Screenshot](./screenshots/adminpage.png) 
-![User Dashboard Screenshot](./screenshots/dashboard.png) 
+![User Dashboard Screenshot](./screenshots/dashboardpage.png) 
 
 
 ---
