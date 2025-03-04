@@ -48,7 +48,7 @@ https://www.flami.org/
 
 ## 🔑 Key Features  
 ✅ **Authentication System** – Secure login, registration, and OTP verification  
-✅ **Admin Dashboard** – Manage products, orders, and users efficiently  
+✅ **Admin Dashboard** – Manage products, orders, and customers efficiently  
 ✅ **User Dashboard** – Personalized shopping experience  
 ✅ **Product Uploading** – Seamless addition of new products  
 ✅ **Secure Transactions** – Powered by **Stripe** for reliable payments  
