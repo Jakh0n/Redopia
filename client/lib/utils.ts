@@ -1,19 +1,17 @@
-import { QueryProps } from '@/types'
-import clsx from 'clsx'
-import { ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-import qs from 'query-string'
-import { remove } from 'lodash'
 import { TransactionState } from '@/constants'
+import { QueryProps } from '@/types'
+import clsx, { ClassValue } from 'clsx'
+import qs from 'query-string'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
 
 export function formatPrice(price: number) {
-	return new Intl.NumberFormat('uz-UZ', {
+	return new Intl.NumberFormat('kr-KR', {
 		style: 'currency',
-		currency: 'UZS',
+		currency: 'KRW',
 	}).format(price)
 }
 

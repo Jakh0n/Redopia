@@ -1,0 +1,115 @@
+{
+  "node": {
+    "7f59e8bb4459c4016eea0e4f3b678232dcbd57d15a": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f62d54b8e116e26510c85ab88dab6b5f596b64a42": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f0c04b9bb8280c4b1004058763525f894556cddc1": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f5af5016a3c11a30a055a0da8a2fc1edd76a8e93b": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7fe2f720e3321612d27af369e350a4c37ca62d1bb2": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f3139562d48825a6503a9aa843bca222f8945b3e5": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7fadc1f5772ff42d4b55369fcc48996f4f9d31ee32": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f294d49011b4a49d8b952ae3c5430f48fbb2d3f15": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7fd51a773f6a1f097e0c5e817f270288cbd76e26f2": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    },
+    "7f4c8bcb0ada6723f8e67995350134120d7f3f67ea": {
+      "workers": {
+        "app/admin/(customers)/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(customers)/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/generate-token.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/actions/admin.action.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/admin/(customers)/page": "rsc"
+      }
+    }
+  },
+  "edge": {}
+}
